@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Senior Advisors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacto.css">
+    <script src="navbar.js"></script>
+</head>
+<body>
+    <div class="backdrop-contacto" data-node-id="1-8">
+        <!-- Navigation Bar -->
+        <div id="navbar-container"></div>
+
+        <!-- Decorative Background Ellipses -->
+        <div class="ellipse-decoration ellipse-top-right" data-node-id="184-472"></div>
+        <div class="ellipse-decoration ellipse-middle-left" data-node-id="184-474"></div>
+
+
+        <!-- Hero Section with Title -->
+        <div class="hero-section" data-node-id="168-496">
+            <div class="hero-background">
+                <img src="https://www.figma.com/api/mcp/asset/e54d255b-efb8-4a4a-bb0a-0528b5298f3c" alt="Background">
+            </div>
+            <h1 class="hero-title" data-node-id="184-449">- contáctanos -</h1>
+        </div>
+
+        <!-- Interactive Cards Section -->
+        <div class="cards-section">
+            <!-- Card 1: Solicita una llamada (Left Card) -->
+            <a href="formulario-clientes.html" class="interactive-card card-left" data-node-id="200-1099">
+                <div class="card-background">
+                    <img src="https://www.figma.com/api/mcp/asset/b94ee491-dfaa-4751-b8e4-7d908b2ca3e6" alt="Background">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title" data-node-id="200-1077">SOLICITA UNA LLAMADA DE DIAGNÓSTICO</h2>
+                    <div class="card-text" data-node-id="200-1078">
+                        <p>Da el primer paso hacia la evolución de tu empresa.</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><br>Solicita una llamada de diagnóstico y descubre cómo nuestros profesionales sénior pueden ayudarte a transformar tus retos en oportunidades reales</p>
+                    </div>
+                </div>
+                <div class="card-arrow" data-node-id="200-1114">
+                    <img src="https://www.figma.com/api/mcp/asset/46466b01-6909-4fed-a7e2-3debe33be3a8" alt="Arrow">
+                </div>
+            </a>
+
+            <!-- Card 2: Quiero ser Senior Advisor (Right Card) -->
+            <a href="formulario-senior-advisors.html" class="interactive-card card-right" data-node-id="200-1124">
+                <div class="card-background">
+                    <img src="https://www.figma.com/api/mcp/asset/ec07322a-4a73-4bb8-ab1b-790d8ff02a5f" alt="Background">
+                    <div class="card-overlay card-overlay-dark"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title card-title-wrap" data-node-id="200-1121">¿Tienes la experiencia y visión para acompañar procesos de transformación empresarial?</h2>
+                    <div class="card-text card-text-advisor" data-node-id="200-1122">
+                        <p><span class="text-bold">Únete a nuestra red de Senior Advisors</span><span class="text-regular"> y forma parte de una comunidad que impulsa el cambio desde el conocimiento, la estrategia y la acción.</span></p>
+                        <p>&nbsp;</p>
+                        <p>Forma parte de nuestra red de profesionales sénior y comparte tu conocimiento para impulsar el crecimiento y la transformación de organizaciones en evolución.</p>
+                    </div>
+                </div>
+                <div class="card-arrow" data-node-id="200-1130">
+                    <img src="https://www.figma.com/api/mcp/asset/46466b01-6909-4fed-a7e2-3debe33be3a8" alt="Arrow">
+                </div>
+            </a>
+        </div>
+
+        <!-- Contact Form and Info Section -->
+        <div class="main-contact-wrapper" data-node-id="368-767">
+            <!-- Rotated Background Image -->
+            <div class="background-image-container">
+                <div class="background-image-rotated">
+                    <div class="background-image-blur" data-node-id="184-470">
+                        <img src="https://www.figma.com/api/mcp/asset/d2401002-b6ac-4847-806a-a357b9331855" alt="Background">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form (Left) -->
+            <div class="contact-form-section" data-node-id="179-667">
+                <h2 class="form-title" data-node-id="179-669">Contáctanos</h2>
+                
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqagrejq" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" data-node-id="183-391">nombre</label>
+                        <input type="text" name="nombre" class="form-input" placeholder="Tu nombre..." data-node-id="184-395" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-node-id="184-404">email</label>
+                        <input type="email" name="email" class="form-input" placeholder="ejemplo@gmail.com" data-node-id="184-396" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-node-id="184-406">concepto</label>
+                        <input type="text" name="concepto" class="form-input" placeholder="Título" data-node-id="184-399" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-node-id="184-408">Mensaje</label>
+                        <textarea name="mensaje" class="form-textarea" placeholder="Escribe aquí..." data-node-id="184-410" required></textarea>
+                    </div>
+
+                    <input type="hidden" name="_next" value="index.html">
+                    <input type="hidden" name="_replyto" value="mjose.martin@senioradvisormov.com">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde el sitio web">
+                    <input type="hidden" name="_cc" value="mjose.martin@senioradvisormov.com">
+
+                    <button type="submit" class="form-submit-btn" data-node-id="29-419">
+                        <span>enviar</span>
+                        <div class="btn-arrow">
+                            <img src="https://www.figma.com/api/mcp/asset/0edaf11d-fe70-4c18-828e-69569d6278d6" alt="Arrow">
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Info Text (Right) -->
+            <div class="contact-info-section" data-node-id="368-768">
+                <p class="info-text" data-node-id="184-439">Para atender consultas generales, solicitudes de información o requerimientos relacionados con nuestros servicios, le invitamos a completar el formulario de contacto que se encuentra a su izquierda.</p>
+                <div class="info-divider" data-node-id="338-889">
+                    <img src="https://www.figma.com/api/mcp/asset/1fd851de-f2a6-4438-829f-fbe981bee465" alt="Divider">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" data-node-id="184-453">
+            <div class="footer-line footer-line-top" data-node-id="184-454"></div>
+            <div class="footer-line footer-line-bottom" data-node-id="184-455"></div>
+            <p class="footer-text" data-node-id="184-456">© 2025 Senior Advisors Movilizadores, S.L. Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navContent = document.querySelector('.nav-content');
+            
+            if (hamburger && navContent) {
+                hamburger.addEventListener('click', function() {
+                    navContent.classList.toggle('active');
+                });
+            }
+
+            // Form Submission Handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // Check if all required fields are filled
+                    const nombre = this.querySelector('input[name="nombre"]').value.trim();
+                    const email = this.querySelector('input[name="email"]').value.trim();
+                    const concepto = this.querySelector('input[name="concepto"]').value.trim();
+                    const mensaje = this.querySelector('textarea[name="mensaje"]').value.trim();
+                    
+                    if (!nombre || !email || !concepto || !mensaje) {
+                        e.preventDefault();
+                        alert('Por favor, complete todos los campos del formulario.');
+                        return false;
+                    }
+
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        e.preventDefault();
+                        alert('Por favor, introduzca una dirección de correo electrónico válida.');
+                        return false;
+                    }
+
+                    // Show success message (form will then submit and redirect)
+                    alert('¡Gracias por contactarnos! Recibiremos su mensaje pronto.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

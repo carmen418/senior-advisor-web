@@ -1,0 +1,566 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Backdrop */
+.backdrop-formulario {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    padding: 121px 0 100px 0;
+}
+
+/* Logo */
+.logo-container {
+    position: absolute;
+    left: 1297px;
+    top: 28px;
+    width: 179px;
+    height: 93px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    left: 56px;
+    top: 121px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.back-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-button span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: #002951;
+}
+
+/* Main Form Container */
+.form-container {
+    position: relative;
+    width: 1054px;
+    min-height: 4116px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -4px -4px 20px 0px rgba(214, 214, 214, 0.25);
+    padding: 72px 54px 94px 54px;
+}
+
+/* Form Header */
+.form-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: #0857a0;
+    margin-bottom: 16px;
+}
+
+.form-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    color: #a7becf;
+    margin-bottom: 19px;
+}
+
+.form-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.54px;
+    color: #54555d;
+    width: 929px;
+    margin-bottom: 71px;
+}
+
+/* Form Styles */
+.registration-form {
+    width: 100%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 929px;
+    margin-bottom: 66px;
+}
+
+.form-field-narrow {
+    margin-bottom: 56.5px;
+}
+
+.form-field-narrow input {
+    width: 234px;
+}
+
+.form-field label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: black;
+}
+
+.required {
+    color: #cd1111;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    height: 54px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 4px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: #0857a0;
+    margin-bottom: 13px;
+    margin-top: 38px;
+}
+
+/* Divider Line */
+.divider-line {
+    width: 929px;
+    height: 3px;
+    background-image: url('https://www.figma.com/api/mcp/asset/53f9dc65-bd4c-4384-8f81-b78ee269c14b');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 49.5px 0 56.5px 0;
+}
+
+/* Standalone Label */
+.standalone-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: black;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* Time Slots */
+.time-slots-container {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin-bottom: 28px;
+}
+
+.time-input {
+    width: 235px;
+    height: 54px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 4px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Weekdays */
+.weekdays-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 17px;
+    margin-bottom: 93px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.hidden-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: #194860;
+    cursor: pointer;
+}
+
+/* Honorarios Section */
+.honorarios-section {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: black;
+    margin-bottom: 28px;
+    white-space: nowrap;
+}
+
+.honorarios-section p {
+    margin: 0;
+}
+
+.honorarios-item {
+    color: #a7becf;
+}
+
+/* Textareas */
+.textarea-large {
+    width: 929px;
+    height: 54px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 4px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    resize: none;
+    margin-bottom: 51px;
+}
+
+.textarea-medium {
+    width: 929px;
+    height: 164px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 4px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    resize: none;
+    margin-bottom: 64px;
+}
+
+.textarea-small {
+    width: 929px;
+    height: 112px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 4px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    resize: none;
+    margin-bottom: 32px;
+}
+
+/* Radio Buttons */
+.radio-buttons-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 41px;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.radio-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.radio-button span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: black;
+}
+
+/* Helper Text */
+.helper-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: #b2b2b2;
+    margin-top: -11px;
+    margin-bottom: 11px;
+}
+
+/* Areas Container */
+.areas-container {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 77px;
+}
+
+.areas-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 447px;
+}
+
+/* Checkbox Vertical */
+.checkbox-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+
+/* Yes/No Container */
+.yes-no-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 567px;
+    margin-bottom: 21px;
+    width: 103px;
+}
+
+/* Privacy Checkbox */
+.privacy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 30px;
+}
+
+.privacy-checkbox label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    color: black;
+    text-decoration: underline;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    position: absolute;
+    right: 54px;
+    bottom: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.submit-button span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: black;
+}
+
+.submit-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg) scaleY(-1);
+    width: 30px;
+    height: 30px;
+}
+
+.submit-arrow img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .backdrop-formulario {
+        padding: 80px 20px;
+    }
+
+    .logo-container {
+        left: auto;
+        right: 20px;
+        top: 20px;
+    }
+
+    .back-button {
+        left: 20px;
+        top: 80px;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 1054px;
+        padding: 50px 30px;
+    }
+
+    .form-description,
+    .form-field,
+    .divider-line,
+    .textarea-large,
+    .textarea-medium,
+    .textarea-small {
+        width: 100%;
+        max-width: 929px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 32px;
+    }
+
+    .form-subtitle {
+        font-size: 24px;
+    }
+
+    .form-description {
+        font-size: 16px;
+    }
+
+    .time-slots-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time-input {
+        width: 100%;
+    }
+
+    .areas-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .areas-column {
+        width: 100%;
+    }
+
+    .radio-buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .radio-button {
+        width: 100%;
+    }
+
+    .yes-no-container {
+        margin-left: 0;
+    }
+
+    .submit-button {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+

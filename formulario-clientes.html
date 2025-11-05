@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Clientes - Senior Advisors</title>
+    <link rel="stylesheet" href="formulario-clientes.css">
+</head>
+<body>
+    <div class="backdrop-formulario" data-node-id="168-591">
+        <!-- Logo -->
+        <div class="logo-container" data-node-id="200-1066">
+            <img src="https://www.figma.com/api/mcp/asset/fde863f0-f3ad-40b7-9e79-27d8094bfbea" alt="Logo Senior Advisors">
+        </div>
+
+        <!-- Back Button -->
+        <a href="contacto.html" class="back-button" data-node-id="370-778">
+            <div class="back-icon">
+                <img src="https://www.figma.com/api/mcp/asset/be80caad-b856-466b-b2c8-56d1d4b8bbf2" alt="Back">
+            </div>
+            <span>volver</span>
+        </a>
+
+        <!-- Main Form Container -->
+        <div class="form-container" data-node-id="200-878">
+            <!-- Header -->
+            <h1 class="form-title" data-node-id="200-880">¿Hablamos?</h1>
+            <p class="form-subtitle" data-node-id="200-879">Solicita una llamada de diagnóstico</p>
+            <p class="form-description" data-node-id="200-882">Solicita una llamada de diagnóstico y descubre cómo nuestros profesionales sénior pueden ayudarte a transformar tus retos en oportunidades reales</p>
+
+            <!-- Form Fields -->
+            <form class="registration-form" id="clientesForm" action="https://formspree.io/f/xpwovqeb" method="POST">
+                <input type="hidden" name="_next" value="index.html">
+                <input type="hidden" name="_subject" value="Solicitud de llamada (formulario de clientes)">
+                <input type="hidden" name="_cc" value="mjose.martin@senioradvisormov.com">
+                
+                <!-- Empresa -->
+                <div class="form-field" data-node-id="338-890">
+                    <label>Empresa <span class="required">*</span></label>
+                    <input type="text" name="empresa" data-node-id="338-892" required>
+                </div>
+
+                <!-- Nombre -->
+                <div class="form-field" data-node-id="200-883">
+                    <label>Nombre <span class="required">*</span></label>
+                    <input type="text" name="nombre" data-node-id="200-885" required>
+                </div>
+
+                <!-- Apellidos -->
+                <div class="form-field" data-node-id="200-886">
+                    <label>Apellidos<span class="required"> *</span></label>
+                    <input type="text" name="apellidos" data-node-id="200-888" required>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-field" data-node-id="200-889">
+                    <label>Correo electrónico<span class="required"> *</span></label>
+                    <input type="email" name="email" data-node-id="200-891" required>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-field" data-node-id="200-892">
+                    <label>Teléfono <span class="required">*</span></label>
+                    <input type="tel" name="telefono" data-node-id="200-894" required>
+                </div>
+
+                <!-- Dirección Section -->
+                <h3 class="section-title" data-node-id="200-895">Dirección</h3>
+
+                <!-- Calle -->
+                <div class="form-field" data-node-id="200-897">
+                    <label>Calle <span class="required">*</span></label>
+                    <input type="text" name="calle" data-node-id="200-899" required>
+                </div>
+
+                <!-- Municipio -->
+                <div class="form-field" data-node-id="200-900">
+                    <label>Municipio <span class="required">*</span></label>
+                    <input type="text" name="municipio" data-node-id="200-902" required>
+                </div>
+
+                <!-- Código postal -->
+                <div class="form-field" data-node-id="200-903">
+                    <label>Código postal <span class="required">*</span></label>
+                    <input type="text" name="codigo_postal" data-node-id="200-905" required>
+                </div>
+
+                <!-- Divider Line -->
+                <div class="divider-line" data-node-id="200-934"></div>
+
+                <!-- Tipo de servicio -->
+                <label class="standalone-label" data-node-id="200-907">¿Qué tipo de servicio busca?</label>
+
+                <div class="service-areas-container">
+                    <div class="service-column" data-node-id="200-957">
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Estrategia y evolución de la compañía" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Estrategia y evolución de la compañía</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Estrategia de talento, organización y planes de sucesión" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Estrategia de talento, organización y planes de sucesión</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Posicionamiento estratégico en el mercado" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Posicionamiento estratégico en el mercado</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Tendencias tecnológicas e impacto en el modelo de negocio" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Tendencias tecnológicas e impacto en el modelo de negocio</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Madurez tecnológica" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Madurez tecnológica</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Otros" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Otros</label>
+                        </div>
+                    </div>
+                    <div class="service-column" data-node-id="200-976">
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Gestión de riesgos y solvencia financiera" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Gestión de riesgos y solvencia financiera</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Internacionalización" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Internacionalización</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Evolución y profesionalización de la empresa familiar" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Evolución y profesionalización de la empresa familiar</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Supply chain" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Supply chain</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Compromiso social y 3er sector" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Compromiso social y 3er sector</label>
+                        </div>
+                        <div class="checkbox-item" data-checkbox>
+                            <input type="checkbox" name="tipo_servicio[]" value="Importación / Exportación" class="hidden-checkbox">
+                            <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                            <label>Importación / Exportación</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disponibilidad -->
+                <label class="standalone-label availability-label" data-node-id="200-896"><span class="label-text">Disponibilidad</span><span class="required"> *</span></label>
+                
+                <div class="weekdays-container" data-node-id="200-917">
+                    <div class="checkbox-item" data-checkbox>
+                        <input type="checkbox" name="disponibilidad[]" value="Lunes" class="hidden-checkbox" required>
+                        <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                        <label>Lunes</label>
+                    </div>
+                    <div class="checkbox-item" data-checkbox>
+                        <input type="checkbox" name="disponibilidad[]" value="Martes" class="hidden-checkbox">
+                        <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                        <label>Martes</label>
+                    </div>
+                    <div class="checkbox-item" data-checkbox>
+                        <input type="checkbox" name="disponibilidad[]" value="Miercoles" class="hidden-checkbox">
+                        <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                        <label>Miercoles</label>
+                    </div>
+                    <div class="checkbox-item" data-checkbox>
+                        <input type="checkbox" name="disponibilidad[]" value="Jueves" class="hidden-checkbox">
+                        <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                        <label>Jueves</label>
+                    </div>
+                    <div class="checkbox-item" data-checkbox>
+                        <input type="checkbox" name="disponibilidad[]" value="Viernes" class="hidden-checkbox">
+                        <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon">
+                        <label>Viernes</label>
+                    </div>
+                </div>
+
+                <!-- Resuma brevemente -->
+                <label class="standalone-label" data-node-id="200-953">Resuma brevemente aquello que busca mejorar en su compañía <span class="required">*</span></label>
+                <p class="helper-text" data-node-id="200-954">*Esta información será util para ponerle en contacto con el Senior Advisor que mejor se ajuste a sus necesidades.</p>
+                <textarea class="textarea-medium" name="resumen" data-node-id="200-937" required></textarea>
+
+                <!-- Otros comentarios -->
+                <label class="standalone-label" data-node-id="200-1028">Otros comentarios de interés que creas importantes de resaltar</label>
+                <textarea class="textarea-small" name="comentarios" data-node-id="200-939"></textarea>
+
+                <!-- Privacy Policy -->
+                <div class="privacy-checkbox" data-checkbox data-node-id="200-1029">
+                    <input type="checkbox" name="privacy_policy" class="hidden-checkbox" required>
+                    <img src="https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464" alt="Unchecked" class="checkbox-icon" data-node-id="200-1031">
+                    <label data-node-id="200-1030">He leido y acepto la política de privacidad de datos de Senior Advisors Movilizadores SL</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button" data-node-id="200-881">
+                    <span>enviar</span>
+                    <div class="submit-arrow">
+                        <img src="https://www.figma.com/api/mcp/asset/a0d3a45c-989f-461e-a289-eb32e677fd94" alt="Arrow">
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const clientesForm = document.getElementById('clientesForm');
+            
+            // Handle checkbox clicks
+            const checkboxItems = document.querySelectorAll('[data-checkbox]');
+            const checkedImg = 'https://www.figma.com/api/mcp/asset/db7d035c-4726-45f6-9465-5dbf18097d2e';
+            const uncheckedImg = 'https://www.figma.com/api/mcp/asset/b0a80038-2caa-4967-9492-c7569df27464';
+            
+            checkboxItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const checkbox = this.querySelector('.hidden-checkbox');
+                    const icon = this.querySelector('.checkbox-icon');
+                    
+                    // Toggle checkbox
+                    checkbox.checked = !checkbox.checked;
+                    
+                    // Update icon
+                    if (checkbox.checked) {
+                        icon.src = checkedImg;
+                        icon.alt = 'Checked';
+                    } else {
+                        icon.src = uncheckedImg;
+                        icon.alt = 'Unchecked';
+                    }
+                });
+            });
+            
+            if (clientesForm) {
+                clientesForm.addEventListener('submit', function(e) {
+                    // Check required fields
+                    const requiredFields = this.querySelectorAll('input[required]:not([type="checkbox"]), textarea[required]');
+                    let allFilled = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            allFilled = false;
+                        }
+                    });
+                    
+                    if (!allFilled) {
+                        e.preventDefault();
+                        alert('Por favor, complete todos los campos obligatorios marcados con *');
+                        return false;
+                    }
+
+                    // Check at least one disponibilidad checkbox is checked
+                    const disponibilidadChecked = this.querySelectorAll('input[name="disponibilidad[]"]:checked');
+                    if (disponibilidadChecked.length === 0) {
+                        e.preventDefault();
+                        alert('Por favor, seleccione al menos un día de disponibilidad.');
+                        return false;
+                    }
+
+                    // Check privacy policy checkbox
+                    const privacyCheckbox = this.querySelector('input[name="privacy_policy"]');
+                    if (!privacyCheckbox.checked) {
+                        e.preventDefault();
+                        alert('Debe aceptar la política de privacidad para continuar.');
+                        return false;
+                    }
+
+                    // Email validation
+                    const email = this.querySelector('input[name="email"]').value;
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        e.preventDefault();
+                        alert('Por favor, introduzca una dirección de correo electrónico válida.');
+                        return false;
+                    }
+
+                    // Show success message (form will then submit and redirect)
+                    alert('¡Gracias por su solicitud! Nos pondremos en contacto con usted pronto.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

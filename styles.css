@@ -1,0 +1,1352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.backdrop-inicio {
+    background-color: #0b1324;
+    position: relative;
+    width: 1512px;
+    height: 5423px;
+    margin: 0 auto;
+}
+
+/* Navigation - fixed at top */
+.navigation {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1512px;
+    height: 90px;
+    background-color: #0b1324;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 281px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+
+.nav-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.48px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
+}
+
+.logo-container {
+    width: 179px;
+    height: 78px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Image Section - absolute left:0 top:-141px */
+.hero-image-section {
+    position: absolute;
+    left: 0;
+    top: -141px;
+    width: 1512px;
+    height: 1011px;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1512px;
+    height: 1200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 45, 92, 0.4);
+}
+
+/* Hero Title - absolute left:756px top:283px (centered with translate) */
+.hero-title {
+    position: absolute;
+    left: 756px;
+    top: 283px;
+    transform: translateX(-50%);
+    width: 1226px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+    color: #f2f2f2;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    white-space: pre-wrap;
+    z-index: 10;
+}
+
+/* Hero Quote - absolute left:84px top:985px */
+.hero-quote-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 985px;
+    width: 1179px;
+    text-align: center;
+}
+
+.hero-quote {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: 0.9px;
+    color: white;
+}
+
+.hero-quote strong {
+    font-weight: 700;
+}
+
+/* Buttons */
+.btn-conocenos {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -191.5px; /* Half the gap between buttons */
+    top: 1161px;
+}
+
+.btn-hablemos {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 191.5px; /* Half the gap between buttons */
+    top: 1161px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary .btn-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: #002d5c;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #003a75;
+}
+
+.btn-secondary .btn-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    color: #b4bae8;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg) scaleY(-1);
+}
+
+.btn-icon img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Tus Retos Section - absolute left:54px top:1351px */
+.seccion-retos {
+    position: absolute;
+    left: 54px;
+    top: 1351px;
+    width: 1403px;
+}
+
+.retos-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 1.35px;
+    background: linear-gradient(to right, #a7becf, #0857a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 10px 30px;
+    margin-bottom: 36px;
+}
+
+.retos-containers {
+    display: flex;
+    gap: 31px;
+    align-items: flex-start;
+}
+
+.reto-container {
+    position: relative;
+    width: 447px;
+    height: 641px;
+}
+
+.reto-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 447px;
+    height: 641px;
+    border: 4px solid #a7becf;
+    border-radius: 40px;
+}
+
+.reto-content {
+    position: absolute;
+    left: 14px;
+    top: 13px;
+    width: 419px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.reto-content-2 {
+    top: 49px;
+    width: 421px;
+    gap: 45px;
+}
+
+.reto-content-3 {
+    left: 12px;
+    top: 11px;
+    width: 424px;
+    gap: 20px;
+    align-items: center;
+}
+
+.reto-image {
+    width: 100%;
+    height: 283px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.reto-image-2 {
+    height: 400px;
+}
+
+.reto-image-3 {
+    height: 267px;
+}
+
+.reto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reto-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 45, 92, 0.2);
+}
+
+.reto-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: 0.66px;
+    color: white;
+    width: 388px;
+    text-align: center;
+}
+
+.reto-text-centered {
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 0.69px;
+    width: 400px;
+}
+
+.reto-text strong {
+    font-weight: 700;
+}
+
+.reto-text .normal {
+    font-weight: 400;
+}
+
+.reto-3 .reto-text {
+    width: 391px;
+}
+
+/* Mission Section - absolute left:0 top:2255px */
+.mission-section {
+    position: absolute;
+    left: 0;
+    top: 2255px;
+    width: 925px;
+    height: 262px;
+    overflow: visible;
+}
+
+.mission-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 925px;
+    height: 262px;
+    background-color: #0f2336;
+}
+
+.mission-content {
+    position: absolute;
+    left: 11px;
+    top: 0;
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    height: 262px;
+}
+
+.mission-title-vertical {
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    letter-spacing: 1.8px;
+    color: #f7f2e4;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.mission-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.3;
+    letter-spacing: 0.84px;
+    color: #b5d1ee;
+    width: 660px;
+}
+
+.mission-mask-group {
+    position: absolute;
+    right: 0;
+    top: -131px;
+    width: 262px;
+    height: 262px;
+}
+
+.mission-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 262px;
+    height: 262px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mission-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 87, 160, 0.2);
+}
+
+/* Vision Section - absolute left:686px top:2568px */
+.vision-section {
+    position: absolute;
+    left: 686px;
+    top: 2568px;
+    width: 826px;
+    height: 262px;
+    overflow: visible;
+}
+
+.vision-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 826px;
+    height: 262px;
+    background-color: #433667;
+}
+
+.vision-content {
+    position: absolute;
+    right: 11px;
+    top: 0;
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    height: 262px;
+}
+
+.vision-mask-group {
+    position: absolute;
+    left: 0;
+    top: -131px;
+    width: 262px;
+    height: 262px;
+}
+
+.vision-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 262px;
+    height: 262px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.vision-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vision-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 114, 169, 0.2);
+}
+
+.vision-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.3;
+    letter-spacing: 0.84px;
+    color: #ced2f2;
+    width: 550px;
+    text-align: right;
+}
+
+.vision-title-vertical {
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    letter-spacing: 1.8px;
+    color: #f7f2e4;
+    writing-mode: vertical-rl;
+}
+
+/* Decorative Ellipses */
+.ellipse-left {
+    position: absolute;
+    left: -22px;
+    top: 2106px;
+    width: 400px;
+    height: 628px;
+    background: url('https://www.figma.com/api/mcp/asset/00b54c22-0893-4772-befa-e1bb5c8cc7cd') no-repeat center;
+    background-size: contain;
+}
+
+.ellipse-bottom {
+    position: absolute;
+    left: 370px;
+    top: 2436px;
+    width: 888px;
+    height: 720px;
+    background: url('https://www.figma.com/api/mcp/asset/43b40e3a-9364-455e-a4f3-6dea3ebe4bc0') no-repeat center;
+    background-size: contain;
+}
+
+.ellipse-right {
+    position: absolute;
+    left: 1304px;
+    top: 2081px;
+    width: 400px;
+    height: 628px;
+    background: url('https://www.figma.com/api/mcp/asset/00b54c22-0893-4772-befa-e1bb5c8cc7cd') no-repeat center;
+    background-size: contain;
+}
+
+/* Valores Section - absolute left:0 top:2992px */
+.seccion-valores {
+    position: absolute;
+    left: 0;
+    top: 2992px;
+    width: 1512px;
+    height: 806px;
+    overflow: hidden;
+}
+
+.valores-header {
+    position: absolute;
+    left: -15px;
+    top: -78px;
+    width: 1551px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.valores-title-line {
+    font-family: 'Anton', sans-serif;
+    font-size: 150px;
+    letter-spacing: 4.5px;
+    line-height: 1;
+    color: #0a427d;
+    white-space: nowrap;
+}
+
+.valores-title-highlight {
+    color: #306caa;
+}
+
+.valores-cards {
+    position: absolute;
+    left: 70px;
+    top: 328px;
+    display: flex;
+    gap: 33px;
+}
+
+.valor-card {
+    width: 250px;
+    height: 300px;
+    background-color: #a7becf;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 17px 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.valor-card:hover {
+    background-color: #EFB801;
+}
+
+.valor-card:nth-child(4) {
+    gap: 0;
+    justify-content: space-between;
+}
+
+.valor-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valor-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.valor-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.9px;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+.valor-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    color: #194860;
+    text-align: center;
+}
+
+.valores-divider {
+    position: absolute;
+    left: 0;
+    top: 3798px;
+    width: 1512px;
+    height: 10px;
+    background-color: #0857a0;
+}
+
+/* Pilares Section - absolute left:0 top:3849px */
+.seccion-pilares {
+    position: absolute;
+    left: 0;
+    top: 3849px;
+    width: 1512px;
+}
+
+.pilares-header {
+    padding: 10px 30px;
+    margin-bottom: 20px;
+}
+
+.pilares-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 1.35px;
+    background: linear-gradient(to right, #cad3da, #0857a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 504px);
+    gap: 0;
+}
+
+.pilar-card {
+    position: relative;
+    width: 504px;
+    height: 310px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 17px;
+    box-sizing: border-box;
+}
+
+.pilar-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pilar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pilar-text {
+    position: relative;
+    z-index: 10;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.3;
+    letter-spacing: 0.75px;
+    color: white;
+    max-width: 470px;
+}
+
+.pilar-card:nth-child(5) .pilar-text {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* CTA Section - absolute left:0 top:4562px */
+.seccion-cta {
+    position: absolute;
+    left: 0;
+    top: 4562px;
+    width: 1512px;
+}
+
+.cta-divider {
+    width: 1512px;
+    height: 16px;
+    background-color: #efb801;
+}
+
+.cta-background {
+    position: relative;
+    width: 1512px;
+    height: 687px;
+}
+
+.cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cta-content {
+    position: absolute;
+    left: 76px;
+    top: 274px;
+    width: 1359px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 32px;
+}
+
+.cta-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    color: white;
+    width: 1339px;
+    margin: 0;
+}
+
+.btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-cta .btn-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+/* Footer - absolute left:0 top:5266px */
+.footer {
+    position: absolute;
+    left: 0;
+    top: 5266px;
+    width: 1512px;
+    height: 157px;
+    background-color: #0b1324;
+}
+
+.footer-line-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1512px;
+    height: 8px;
+    background-color: #efb801;
+}
+
+.footer-line-2 {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 1512px;
+    height: 8px;
+    background-color: #efb801;
+}
+
+.footer-text {
+    position: absolute;
+    right: 23px;
+    top: 102px;
+    font-family: 'Afacad', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    color: white;
+    text-align: right;
+}
+
+/* ====================
+   RESPONSIVE DESIGN
+   ==================== */
+
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 23px;
+    width: 25px;
+    height: 12px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tablet and Below - 1024px */
+@media screen and (max-width: 1024px) {
+    .backdrop-inicio {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .hero-image-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1512/1200;
+    }
+
+    .seccion-retos {
+        width: 90%;
+        left: 5%;
+    }
+
+    .retos-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pilares-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile - 768px and Below */
+@media screen and (max-width: 768px) {
+    /* Layout */
+    .backdrop-inicio {
+        width: 100%;
+        max-width: 393px;
+        height: auto;
+    }
+
+    /* Navigation */
+    .navigation {
+        width: 100%;
+        height: 60px;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-content {
+        display: none;
+        margin-right: 0;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-image-section {
+        left: 0;
+        top: 60px;
+        width: 100%;
+        max-width: 393px;
+        height: 258px;
+        overflow: hidden;
+    }
+
+    .hero-image-container {
+        left: -6px;
+        width: 406px;
+        height: 322px;
+    }
+
+    .hero-title {
+        left: 50%;
+        top: 85px;
+        width: 290px;
+        font-size: 16px;
+        line-height: 1.6;
+        letter-spacing: 0.48px;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Hero Quote */
+    .hero-quote-content {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 382px;
+        width: 90%;
+        max-width: 318px;
+    }
+
+    .hero-quote {
+        font-size: 26px;
+        line-height: 1.3;
+        letter-spacing: 0.78px;
+    }
+
+    /* Buttons */
+    .btn-conocenos {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        top: 725px;
+        width: 329px;
+    }
+
+    .btn-hablemos {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        top: 793px;
+        width: 329px;
+    }
+
+    .btn-primary .btn-text,
+    .btn-secondary .btn-text {
+        font-size: 16px;
+        letter-spacing: 0.48px;
+    }
+
+    /* Retos Section */
+    .seccion-retos {
+        left: 23px;
+        top: 1094px;
+        width: 348px;
+    }
+
+    .retos-title {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 347px;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: 1.2px;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 95px;
+    }
+
+    .retos-containers {
+        flex-direction: column;
+        gap: 53px;
+    }
+
+    .reto-container {
+        width: 348px;
+        height: 434px;
+    }
+
+    .reto-border {
+        width: 348px;
+        height: 434px;
+    }
+
+    .reto-content {
+        left: 11px;
+        top: 8.8px;
+        width: 326px;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .reto-content-2 {
+        top: 15px;
+        width: 318px;
+        gap: 40px;
+    }
+
+    .reto-content-3 {
+        left: 12px;
+        top: 13px;
+        width: 325px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .reto-image {
+        height: 209px;
+        border-radius: 30px;
+    }
+
+    .reto-image-2 {
+        height: 283px;
+        border-radius: 25px;
+    }
+
+    .reto-image-3 {
+        height: 186px;
+        border-radius: 30px;
+    }
+
+    .reto-text {
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.48px;
+        width: 310px;
+        text-align: center;
+    }
+
+    .reto-text-centered {
+        font-size: 16px;
+        letter-spacing: 0.48px;
+        width: 318px;
+    }
+
+    .reto-3 .reto-text {
+        width: 309px;
+    }
+
+    /* Mission Section */
+    .mission-section {
+        left: 0;
+        top: 2620px;
+        width: 100%;
+        max-width: 393px;
+        height: 362px;
+    }
+
+    .mission-container {
+        width: 100%;
+        height: 362px;
+    }
+
+    .mission-content {
+        left: 0;
+        width: 100%;
+        height: 362px;
+        gap: 17px;
+        padding: 0 10px;
+    }
+
+    .mission-title-vertical {
+        font-size: 60px;
+        letter-spacing: 1.8px;
+    }
+
+    .mission-text {
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: 0.6px;
+        width: 261px;
+    }
+
+    .mission-mask-group {
+        display: none;
+    }
+
+    /* Vision Section */
+    .vision-section {
+        left: 1px;
+        top: 3034px;
+        width: 100%;
+        max-width: 393px;
+        height: 270px;
+    }
+
+    .vision-container {
+        width: 100%;
+        height: 270px;
+    }
+
+    .vision-content {
+        left: 0;
+        width: 100%;
+        height: 270px;
+        gap: 17px;
+        flex-direction: row-reverse;
+        padding: 0 10px;
+    }
+
+    .vision-mask-group {
+        display: none;
+    }
+
+    .vision-text {
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: 0.6px;
+        width: 247px;
+    }
+
+    .vision-title-vertical {
+        font-size: 60px;
+        letter-spacing: 1.8px;
+    }
+
+    /* Ellipses - Hide on mobile */
+    .ellipse-left,
+    .ellipse-bottom,
+    .ellipse-right {
+        display: none;
+    }
+
+    /* Valores Section */
+    .seccion-valores {
+        left: -7px;
+        top: 3338px;
+        width: 408px;
+        height: 1780px;
+        filter: blur(0px);
+    }
+
+    .valores-header {
+        left: 0;
+        top: 0;
+        width: 408px;
+        height: 1778px;
+        gap: 8px;
+    }
+
+    .valores-title-line {
+        font-size: 39px;
+        line-height: 1;
+        letter-spacing: 1.17px;
+    }
+
+    .valores-title-highlight {
+        color: #306caa;
+    }
+
+    .valores-cards {
+        left: 75px;
+        top: 124px;
+        flex-direction: column;
+        gap: 31px;
+        width: 252px;
+    }
+
+    .valor-card {
+        width: 252px;
+        height: 300px;
+    }
+
+    .valores-divider {
+        left: 0;
+        top: 5118px;
+        width: 100%;
+    }
+
+    /* Pilares Section */
+    .seccion-pilares {
+        left: -37px;
+        top: 5380px;
+        width: 504px;
+    }
+
+    .pilares-header {
+        padding: 10px 30px;
+        margin-bottom: 20px;
+    }
+
+    .pilares-title {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 347px;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: 1.2px;
+        text-align: center;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-left: 37px;
+    }
+
+    .pilar-card {
+        width: 392px;
+        height: 310px;
+        padding: 17px;
+    }
+
+    .pilar-text {
+        font-size: 25px;
+        line-height: 1;
+        letter-spacing: 0.75px;
+        max-width: 100%;
+    }
+
+    /* CTA Section */
+    .seccion-cta {
+        left: -37px;
+        top: 7315px;
+        width: 504px;
+    }
+
+    .cta-divider {
+        width: 100%;
+        max-width: 392px;
+        margin-left: 37px;
+    }
+
+    .cta-background {
+        width: 100%;
+        max-width: 392px;
+        margin-left: 37px;
+    }
+
+    .cta-content {
+        left: 54px;
+        top: 271px;
+        width: 344px;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .cta-title {
+        font-size: 50px;
+        line-height: 1.2;
+        letter-spacing: 1.5px;
+        width: 378px;
+    }
+
+    .btn-cta {
+        width: 344px;
+    }
+
+    .btn-cta .btn-text {
+        font-size: 15px;
+        letter-spacing: 0.45px;
+    }
+
+    /* Footer */
+    .footer {
+        left: 0;
+        top: 8018px;
+        width: 100%;
+        max-width: 393px;
+        height: 146px;
+    }
+
+    .footer-line-1,
+    .footer-line-2 {
+        width: 1512px;
+    }
+
+    .footer-text {
+        right: 13px;
+        top: 101px;
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        width: 252px;
+    }
+}
+
+/* Mobile - 480px and Below */
+@media screen and (max-width: 480px) {
+    .backdrop-inicio {
+        max-width: 100%;
+    }
+
+    .hero-image-section,
+    .mission-section,
+    .vision-section,
+    .footer {
+        max-width: 100%;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+}
