@@ -16,7 +16,8 @@ body {
     position: relative;
     width: 100%;
     max-width: 1512px;
-    height: 4335px;
+    min-height: 4335px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -90,6 +91,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(178deg, rgba(11, 18, 36, 0.60) 0%, rgba(42, 73, 138, 0.60) 100%);
+    z-index: 1;
 }
 
 .hero-title-servicios {
@@ -108,6 +120,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    z-index: 2;
 }
 
 /* Services Section - Exact positioning from Figma */
@@ -583,12 +596,13 @@ body {
     left: 0;
     width: 220px;
     height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .area-circle img {
-    width: 100%;
-    height: 100%;
-    display: block;
+    display: none;
 }
 
 .area-text {
@@ -1291,84 +1305,108 @@ body {
         width: 100%;
         padding: 0;
         margin-bottom: 0;
-    }
-
-    .mirada-externa-content {
-        width: 100%;
-        padding: 0 15px;
-        margin-bottom: 0;
-    }
-
-    .mirada-externa-text {
-        width: 100%;
-        margin-top: 10px;
-        padding: 0 8px;
-        font-size: 18px;
-        letter-spacing: 0.72px;
+        display: flex;
+        flex-direction: column;
     }
 
     .mirada-externa-image {
         width: calc(100% - 30px);
         height: 256px;
         margin: 9px 15px 0;
+        order: 1;
+    }
+
+    .mirada-externa-content {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 0;
+        order: 2;
+    }
+
+    .mirada-externa-text {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 8px;
+        font-size: 4.5vw;
+        letter-spacing: 0.72px;
     }
 
     .mirada-interna-section {
         width: calc(100% - 30px);
-        height: 569px;
+        height: auto;
+        min-height: 569px;
         margin: 39px 15px 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .mirada-interna-image {
         height: 100%;
+        min-height: 569px;
+        position: relative;
     }
 
-    .mirada-interna-text {
-        left: 16px;
-        top: 13px;
-        width: calc(100% - 32px);
-        max-width: none;
-        font-size: 18px;
-        letter-spacing: 0.72px;
-    }
-
-    .mirada-interna-text ol {
-        margin-left: 40px;
+    .mirada-interna-content {
+        display: flex;
+        flex-direction: column;
     }
 
     .mirada-interna-title {
-        left: 22px;
-        top: 13px;
+        position: relative;
+        left: 0;
+        top: 0;
         bottom: auto;
-        width: calc(100% - 44px);
+        width: 100%;
         max-width: none;
         font-size: 30px;
         letter-spacing: 0.9px;
+        padding: 20px 15px 10px;
+        text-align: center;
+    }
+
+    .mirada-interna-text {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        font-size: 4.5vw;
+        letter-spacing: 0.72px;
+        padding: 10px 20px 30px;
+    }
+
+    .mirada-interna-text ol {
+        margin-left: 30px;
+        margin-top: 10px;
     }
 
     .mirada-evolutiva-section {
         width: 100%;
         padding: 0;
         margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .mirada-evolutiva-image {
         width: calc(100% - 30px);
         height: 259px;
         margin: 41px 15px 0;
+        order: 1;
     }
 
     .mirada-evolutiva-content {
         width: 100%;
         padding: 0 15px;
+        order: 2;
     }
 
     .mirada-evolutiva-text {
         width: 100%;
         margin-top: 13px;
         padding: 0 5px;
-        font-size: 18px;
+        font-size: 4.5vw;
         letter-spacing: 0.72px;
     }
 
@@ -1463,6 +1501,7 @@ body {
     .area-circle {
         width: 220px;
         height: 220px;
+        background-size: contain;
     }
 
     .area-text {
@@ -1616,6 +1655,7 @@ body {
     .area-circle {
         width: 200px;
         height: 200px;
+        background-size: contain;
     }
 
     .area-text {
