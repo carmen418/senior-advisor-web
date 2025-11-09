@@ -232,44 +232,7 @@
     object-position: 50% 50%;
 }
 
-/* Footer */
-.footer {
-    position: absolute;
-    left: 0;
-    top: 2452px;
-    width: 1512px;
-    height: 165px;
-    background-color: #0b1324;
-    overflow: hidden;
-}
-
-.footer-line {
-    position: absolute;
-    width: 1512px;
-    height: 8px;
-    background-color: #efb801;
-}
-
-.footer-line-top {
-    top: 0;
-}
-
-.footer-line-bottom {
-    top: 20px;
-}
-
-.footer-text {
-    position: absolute;
-    right: 23px;
-    top: 102px;
-    font-family: 'Afacad', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: normal;
-    letter-spacing: 0.6px;
-    color: white;
-    text-align: right;
-}
+/* Footer styles are in footer.css */
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {

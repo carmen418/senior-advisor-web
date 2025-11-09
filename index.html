@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700;900&family=Inter:wght@400;600;700&family=Afacad&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <script src="navbar.js"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <!-- Hero Image -->
         <div class="hero-image-section">
             <div class="hero-image-container">
-                <img src="https://www.figma.com/api/mcp/asset/3d16a3c4-b84b-4b59-ad3b-360f92664e06" alt="Hero Image">
+                <img src="assets/hero.jpg" alt="Hero Image">
                 <div class="hero-overlay"></div>
             </div>
         </div>
@@ -27,28 +28,32 @@
         <!-- Hero Title -->
         <h1 class="hero-title">Evolucionar requiere visión, valentía y confianza en el futuro, desafiando lo evidente.</h1>
 
-        <!-- Hero Quote -->
-        <div class="hero-quote-content">
-            <p class="hero-quote">
-                Es por eso que decidimos <strong>retar desde la experiencia y el conocimiento</strong>, para 
-                <strong>transformar retos en oportunidades</strong> a través de la acción, la mirada diferente y el atrevimiento.
-            </p>
+        <div class="hero-text-content">
+            <!-- Hero Quote -->
+            <div class="hero-quote-content">
+                <p class="hero-quote">
+                    Es por eso que decidimos <strong>retar desde la experiencia y el conocimiento</strong>, para 
+                    <strong>transformar retos en oportunidades</strong> a través de la acción, la mirada diferente y el atrevimiento.
+                </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="hero-buttons">
+                <button class="btn-primary btn-conocenos" onclick="window.location.href='servicios.html'">
+                    <span class="btn-text">conoce como trabajamos</span>
+                    <div class="btn-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/cc3d490e-38ba-45d8-a220-10690d817c90" alt="arrow">
+                    </div>
+                </button>
+
+                <button class="btn-secondary btn-hablemos" onclick="window.location.href='contacto.html'">
+                    <span class="btn-text">hablemos</span>
+                    <div class="btn-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/66a33a34-a0b1-467e-b5e3-52a5ecbd2915" alt="arrow">
+                    </div>
+                </button>
+            </div>
         </div>
-
-        <!-- Buttons -->
-        <button class="btn-primary btn-conocenos" onclick="window.location.href='servicios.html'">
-            <span class="btn-text">conoce como trabajamos</span>
-            <div class="btn-icon">
-                <img src="https://www.figma.com/api/mcp/asset/cc3d490e-38ba-45d8-a220-10690d817c90" alt="arrow">
-            </div>
-        </button>
-
-        <button class="btn-secondary btn-hablemos" onclick="window.location.href='contacto.html'">
-            <span class="btn-text">hablemos</span>
-            <div class="btn-icon">
-                <img src="https://www.figma.com/api/mcp/asset/66a33a34-a0b1-467e-b5e3-52a5ecbd2915" alt="arrow">
-            </div>
-        </button>
 
         <!-- Tus Retos Section -->
         <section class="seccion-retos">
@@ -100,35 +105,25 @@
 
         <!-- Mission Section -->
         <section class="mission-section">
-            <div class="mission-container"></div>
-            <div class="mission-content">
-                <div class="mission-title-vertical">MISIÓN</div>
-                <p class="mission-text">
-                    Conectar talento sénior extraordinario con organizaciones en transformación, proporcionando asesoramiento estratégico, acompañamiento de alto impacto y herramientas innovadoras que potencien decisiones críticas y sostenibles
-                </p>
-                <div class="mission-mask-group">
-                    <div class="mission-image">
-                        <img src="https://www.figma.com/api/mcp/asset/7baaddab-7a38-4c8e-a91d-0d2a8eeaf722" alt="Mission">
-                        <div class="mission-image-overlay"></div>
-                    </div>
+            <div class="mission-container">
+                <div class="mission-content">
+                    <div class="mission-title-vertical">MISIÓN</div>
+                    <p class="mission-text">
+                        Conectar talento sénior extraordinario con organizaciones en transformación, proporcionando asesoramiento estratégico, acompañamiento de alto impacto y herramientas innovadoras que potencien decisiones críticas y sostenibles
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Vision Section -->
         <section class="vision-section">
-            <div class="vision-container"></div>
-            <div class="vision-content">
-                <div class="vision-mask-group">
-                    <div class="vision-image">
-                        <img src="https://www.figma.com/api/mcp/asset/989619be-7e64-4545-a327-7644bc3111f0" alt="Vision">
-                        <div class="vision-image-overlay"></div>
-                    </div>
+            <div class="vision-container">
+                <div class="vision-content">
+                    <p class="vision-text">
+                        Ser una palanca de desarrollo y evolución estratégica global, donde el valor no se mida por la edad, sino por la capacidad de entender y liderar el cambio.
+                    </p>
+                    <div class="vision-title-vertical">VISIÓN</div>
                 </div>
-                <p class="vision-text">
-                    Ser una palanca de desarrollo y evolución estratégica global, donde el valor no se mida por la edad, sino por la capacidad de entender y liderar el cambio.
-                </p>
-                <div class="vision-title-vertical">VISIÓN</div>
             </div>
         </section>
 
@@ -140,12 +135,12 @@
         <!-- Valores Section -->
         <section class="seccion-valores">
             <div class="valores-header">
-                <div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
                 <div class="valores-title-line valores-title-highlight">VALORES QUE NOS MUEVEN</div>
+                <!--<div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
                 <div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
                 <div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
                 <div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
-                <div class="valores-title-line">VALORES QUE NOS MUEVEN</div>
+                <div class="valores-title-line">VALORES QUE NOS MUEVEN</div> -->
             </div>
             <div class="valores-cards">
                 <div class="valor-card">
@@ -244,13 +239,11 @@
                 </button>
             </div>
         </section>
-
         <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-line-1"></div>
-            <div class="footer-line-2"></div>
-            <p class="footer-text">© 2025 Senior Advisors Movilizadores, S.L. Todos los derechos reservados</p>
-        </footer>
+        <div id="footer-container"></div>
     </div>
+
+    <script src="footer.js"></script>
+    <script src="gen_lines.js"></script>
 </body>
 </html>
