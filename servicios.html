@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Senior Advisors</title>
     <link rel="stylesheet" href="servicios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700;900&family=Afacad:wght@400&display=swap" rel="stylesheet">
     <script src="navbar.js"></script>
 </head>
 <body>
@@ -12,114 +15,148 @@
         <!-- Navigation Component -->
         <div id="navbar-container"></div>
 
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="hero-image">
-                <img src="https://www.figma.com/api/mcp/asset/621b9b6e-e201-4ce1-ab57-50841fd343de" alt="Hero Background">
-                <div class="hero-overlay"></div>
-            </div>
-            <h1 class="hero-title">
+        <!-- Decorative Ellipses -->
+        <div class="ellipse ellipse-11"></div>
+        <div class="ellipse ellipse-9"></div>
+        <div class="ellipse ellipse-8"></div>
+        <div class="ellipse ellipse-10"></div>
+        <div class="ellipse ellipse-5-left"></div>
+        <div class="ellipse ellipse-5-center"></div>
+        <div class="ellipse ellipse-11-right"></div>
+
+        <!-- Hero Section with Gradient Title -->
+        <section class="hero-section-servicios">
+            <h1 class="hero-title-servicios">
                 Acompañamos a las empresas a través de una red de profesionales senior en procesos de transformación, sucesión, crecimiento y optimización.
             </h1>
-        </div>
+        </section>
 
         <!-- Services Section -->
-        <section class="servicios-section">
-            <div class="servicios-container">
-                <div class="servicio-item">
-                    <div class="servicio-icon">
-                        <img src="https://www.figma.com/api/mcp/asset/7d49901c-162b-453f-8c2f-d88b1adacef3" alt="Asesoramiento Estratégico">
+        <section class="servicios-container-main">
+            <div class="servicios-wrapper">
+                <div class="servicio-card">
+                    <div class="servicio-icon-wrapper">
+                        <svg class="servicio-icon" viewBox="0 0 80 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 31L38.5 2L78 31" stroke="url(#gradient1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#a7becf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#66a0cb;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">ASESORAMIENTO ESTRATÉGICO</h3>
+                    <h3 class="servicio-title-card">ASESORAMIENTO ESTRATÉGICO</h3>
                 </div>
-                <div class="servicio-item">
-                    <div class="servicio-icon">
-                        <img src="https://www.figma.com/api/mcp/asset/8c3de7ed-943e-4099-b469-dcfd306fe677" alt="Aprendizaje">
+                <div class="servicio-card">
+                    <div class="servicio-icon-wrapper servicio-icon-large">
+                        <svg class="servicio-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40 20.8L40 59.2M20.8 40L59.2 40M40 10C24.5 10 12 22.5 12 38C12 53.5 24.5 66 40 66C55.5 66 68 53.5 68 38C68 22.5 55.5 10 40 10Z" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#a7becf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#66a0cb;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">APRENDIZAJE Y COMUNIDAD</h3>
+                    <h3 class="servicio-title-card">APRENDIZAJE Y COMUNIDAD</h3>
                 </div>
-                <div class="servicio-item">
-                    <div class="servicio-icon">
-                        <img src="https://www.figma.com/api/mcp/asset/bf3917cd-f12f-406e-bc31-5cb73ee00375" alt="Innovación">
+                <div class="servicio-card">
+                    <div class="servicio-icon-wrapper servicio-icon-large">
+                        <svg class="servicio-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40 8C40 8 32 12 32 20C32 24 34 27 40 27C46 27 48 24 48 20C48 12 40 8 40 8ZM40 27V42M28 42H52M35 42V52M45 42V52M40 52V66M30 66H50" stroke="url(#gradient3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#a7becf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#66a0cb;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">INNOVACIÓN Y TECNOLOGÍA</h3>
+                    <h3 class="servicio-title-card">INNOVACIÓN Y TECNOLOGÍA</h3>
                 </div>
             </div>
         </section>
 
+        <!-- Divider Line -->
         <div class="divider-line"></div>
 
         <!-- Mirada Externa Section -->
         <section class="mirada-externa-section">
-            <h2 class="mirada-externa-title">MIRADA EXTERNA</h2>
-            <div class="mirada-externa-text">
-                <p><span>Profesionales validados con </span><strong>experiencia directiva</strong><span> en contextos complejos.</span></p>
-                <p>&nbsp;</p>
-                <p><span>Actúan como </span><strong>acompañantes estratégicos</strong><span>, sin generar dependencia permanente. </span></p>
-                <p>&nbsp;</p>
-                <p>Subservicios: </p>
-                <ol>
-                    <li><strong>Asesoramiento estratégico</strong></li>
-                    <li><span>Proyectos especiales y </span><strong>diagnóstico</strong><span> áreas a intervenir</span></li>
-                    <li><strong>Consejos asesores</strong><span>. </span></li>
-                </ol>
+            <div class="mirada-externa-content">
+                <h2 class="section-title">MIRADA EXTERNA: SENIOR ADVISOR EXTERNO</h2>
+                <div class="mirada-externa-text">
+                    <p>Profesionales validados con <strong>experiencia directiva</strong> en contextos complejos.</p>
+                    <p>Actúan como <strong>acompañantes estratégicos</strong>, sin generar dependencia permanente.</p>
+                    <p>&nbsp;</p>
+                    <p>Subservicios:</p>
+                    <ol>
+                        <li><strong>Asesoramiento estratégico</strong></li>
+                        <li>Proyectos especiales y <strong>diagnóstico</strong> áreas a intervenir</li>
+                        <li><strong>Consejos asesores</strong>.</li>
+                        <li>Modelos de negocio, estrategia de talento e impacto tecnológico</li>
+                    </ol>
+                </div>
             </div>
             <div class="mirada-externa-image">
-                <img src="https://www.figma.com/api/mcp/asset/8bb651ba-6119-4bba-a2c6-494abfa7c230" alt="Mirada Externa">
+                <img src="https://www.figma.com/api/mcp/asset/de7e69df-c58a-4ca7-a31f-733c2dec4c11" alt="Mirada Externa">
             </div>
         </section>
 
         <!-- Mirada Interna Section -->
         <section class="mirada-interna-section">
             <div class="mirada-interna-image">
-                <img src="https://www.figma.com/api/mcp/asset/57f6d73d-e1ee-4b3f-85ab-be85ef346911" alt="Mirada Interna">
+                <img src="https://www.figma.com/api/mcp/asset/13e552ca-2e20-444e-b4c7-697fd070955e" alt="Mirada Interna">
                 <div class="mirada-interna-overlay"></div>
             </div>
             <div class="mirada-interna-content">
                 <div class="mirada-interna-text">
-                    <p class="text-shadow"><strong>Desarrollo de talento interno con perfil sénior</strong>, directivo y carrera ejemplificante para <strong>fortalecer procesos de transición y sucesión</strong>.</p>
+                    <p><strong>¿Dispones de Seniors internos brillantes y con una carrera directiva dentro de la compañía? Transfórmalos en Advisors para acelerar la evolución y la sucesión.</strong></p>
+                    <p>&nbsp;</p>
+                    <p><strong>Nosotros te ayudamos con el desarrollo de talento interno con perfil sénior</strong>, directivo y carrera ejemplificante para <strong>fortalecer procesos de transición y sucesión</strong>.</p>
                     <ol type="a">
-                        <li class="text-shadow">Selección y evaluación de candidatos internos</li>
-                        <li class="text-shadow">Certificación y acompañamiento para operar como Senior Advisor interno o coach interno de aceleración de desarrollo joven.</li>
-                        <li class="text-shadow">Revisión del plan retributivo</li>
+                        <li>Selección y evaluación de candidatos internos</li>
+                        <li>Certificación y acompañamiento para operar como Senior Advisor interno o coach interno de aceleración de desarrollo joven.</li>
+                        <li>Revisión del plan retributivo</li>
                     </ol>
                 </div>
-                <h2 class="mirada-interna-title">MIRADA INTERNA</h2>
+                <h2 class="section-title mirada-interna-title">MIRADA INTERNA: SENIOR ADVISOR INTERNO</h2>
             </div>
         </section>
 
         <!-- Mirada Evolutiva Section -->
         <section class="mirada-evolutiva-section">
             <div class="mirada-evolutiva-image">
-                <img src="https://www.figma.com/api/mcp/asset/d0d3507a-8a96-4192-a96f-be6e8403281e" alt="Mirada Evolutiva">
+                <img src="https://www.figma.com/api/mcp/asset/cbd4b630-fee6-4abb-b2e8-1f2d76b04855" alt="Mirada Evolutiva">
                 <div class="mirada-evolutiva-overlay"></div>
             </div>
             <div class="mirada-evolutiva-content">
-                <h2 class="mirada-evolutiva-title">MIRADA EVOLUTIVA</h2>
+                <h2 class="section-title">MIRADA EVOLUTIVA: COACHING EJECUTIVO</h2>
                 <p class="mirada-evolutiva-text">
-                    <strong>Fortalecer</strong> liderazgo, visión estratégica y pensamiento crítico 
-                    <strong>para la toma de decisiones sostenibles</strong> a través de procesos de 
-                    <strong>coaching individual</strong> y <strong>colectivo</strong>.
+                    <strong>Fortalecer</strong> liderazgo, visión estratégica y pensamiento crítico <strong>para la toma de decisiones sostenibles</strong> a través de procesos de <strong>coaching individual</strong> y <strong>colectivo</strong>.
                 </p>
             </div>
         </section>
 
+        <!-- Gradient Dividers -->
+        <div class="gradient-divider gradient-divider-top"></div>
+
         <!-- Partners Section -->
         <section class="partners-section">
-            <div class="partners-background"></div>
             <div class="partners-content">
-                <h2 class="partners-title">PARTNERS ESTRATÉGICOS</h2>
+                <h2 class="section-title partners-title">PARTNERS ESTRATÉGICOS</h2>
                 <p class="partners-subtitle">Colaboramos con partners técnicos especializados</p>
                 <div class="partners-grid">
                     <div class="partner-item">
                         <div class="partner-logo">
-                            <img src="https://www.figma.com/api/mcp/asset/e41375c2-bb9d-4645-97ce-5029c7fb6d2a" alt="Partner 1">
+                            <img src="https://www.figma.com/api/mcp/asset/c936bb0a-617c-46b6-95aa-bc8435346ede" alt="Dathum">
                         </div>
                         <p class="partner-description">Diagnóstico y priorización de áreas de intervención.</p>
                     </div>
                     <div class="partner-item">
-                        <div class="partner-logo">
-                            <img src="https://www.figma.com/api/mcp/asset/0dae5f7a-1798-47f4-ab82-d59a8242c0d1" alt="Partner 2">
+                        <div class="partner-logo partner-logo-trust">
+                            <img src="https://www.figma.com/api/mcp/asset/05d35924-e3b7-43bc-b09a-d4d1bd458f09" alt="Trust">
                         </div>
                         <p class="partner-description">Confianza y gestión de reputación.</p>
                     </div>
@@ -127,83 +164,101 @@
             </div>
         </section>
 
+        <!-- Gradient Divider Bottom -->
         <div class="gradient-divider gradient-divider-bottom"></div>
+
+        <!-- Areas Background Image -->
+        <div class="areas-background">
+            <img src="https://www.figma.com/api/mcp/asset/7210399a-c6c2-4604-a34f-035d82dc6fa1" alt="Areas Background">
+            <div class="areas-background-overlay"></div>
+        </div>
 
         <!-- Areas de Intervención Section -->
         <section class="areas-section">
-            <h2 class="areas-title">ÁREAS DE INTERVENCIÓN</h2>
-            <p class="areas-subtitle">Nos especializamos en ...</p>
+            <h2 class="section-title areas-title">ÁREAS DE INTERVENCIÓN</h2>
             
-            <!-- Area 1 -->
-            <div class="area-item area-item-1">
-                <div class="area-circle">
-                    <img src="https://www.figma.com/api/mcp/asset/a1324cfa-af86-44d5-b87d-bc84663b53ca" alt="Circle">
+            <div class="areas-grid">
+                <!-- Area 1 -->
+                <div class="area-item">
+                    <div class="area-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/26439180-0ebe-4074-96db-916c5b10d42a" alt="Circle">
+                    </div>
+                    <p class="area-text">Estrategia general y evolución de la compañía</p>
+                    <p class="area-number">1</p>
                 </div>
-                <p class="area-text area-text-1">Estrategia general y evolución de la compañía</p>
-                <p class="area-number">1</p>
-            </div>
-            
-            <!-- Area 2 -->
-            <div class="area-item area-item-2">
-                <div class="area-circle">
-                    <img src="https://www.figma.com/api/mcp/asset/a1324cfa-af86-44d5-b87d-bc84663b53ca" alt="Circle">
+                
+                <!-- Area 2 -->
+                <div class="area-item">
+                    <div class="area-circle area-circle-alt">
+                        <img src="https://www.figma.com/api/mcp/asset/f8741841-2418-46f7-91c1-8a35371558eb" alt="Circle">
+                    </div>
+                    <p class="area-text">Estrategia de talento</p>
+                    <p class="area-number">2</p>
                 </div>
-                <p class="area-text area-text-2">Estrategia de talento</p>
-                <p class="area-number">2</p>
-            </div>
-            
-            <!-- Area 3 -->
-            <div class="area-item area-item-3">
-                <div class="area-circle">
-                    <img src="https://www.figma.com/api/mcp/asset/a1324cfa-af86-44d5-b87d-bc84663b53ca" alt="Circle">
+                
+                <!-- Area 3 -->
+                <div class="area-item">
+                    <div class="area-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/26439180-0ebe-4074-96db-916c5b10d42a" alt="Circle">
+                    </div>
+                    <p class="area-text">Internacionalización</p>
+                    <p class="area-number">3</p>
                 </div>
-                <p class="area-text area-text-3">Internacionalización</p>
-                <p class="area-number">3</p>
-            </div>
-            
-            <!-- Area 4 -->
-            <div class="area-item area-item-4">
-                <div class="area-circle">
-                    <img src="https://www.figma.com/api/mcp/asset/a1324cfa-af86-44d5-b87d-bc84663b53ca" alt="Circle">
+                
+                <!-- Area 4 -->
+                <div class="area-item">
+                    <div class="area-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/26439180-0ebe-4074-96db-916c5b10d42a" alt="Circle">
+                    </div>
+                    <p class="area-text">Evolución de la empresa familiar</p>
+                    <p class="area-number">4</p>
                 </div>
-                <p class="area-text area-text-4">Evolución de la empresa familiar</p>
-                <p class="area-number">4</p>
-            </div>
-            
-            <!-- Area 5 -->
-            <div class="area-item area-item-5">
-                <div class="area-circle">
-                    <img src="https://www.figma.com/api/mcp/asset/a1324cfa-af86-44d5-b87d-bc84663b53ca" alt="Circle">
+                
+                <!-- Area 5 -->
+                <div class="area-item">
+                    <div class="area-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/26439180-0ebe-4074-96db-916c5b10d42a" alt="Circle">
+                    </div>
+                    <p class="area-text">Tercer sector y compromiso social</p>
+                    <p class="area-number">5</p>
                 </div>
-                <p class="area-text area-text-5">Tercer sector y compromiso social</p>
-                <p class="area-number">5</p>
             </div>
+
+            <!-- CTA Button -->
+            <button class="cta-button" onclick="window.location.href='contacto.html'">
+                <span class="cta-text">¿Nos permites conversar?</span>
+                <div class="cta-icon">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 21.25L18.75 15L12.5 8.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </button>
         </section>
-
-        <!-- CTA Button -->
-        <button class="cta-button" onclick="window.location.href='formulario-clientes.html'">
-            <span class="cta-text">solicita una llamada de diagnóstico gratuita</span>
-            <div class="cta-icon">
-                <img src="https://www.figma.com/api/mcp/asset/f6cf59a6-a8dc-48dd-9d3b-e2f270a0bc1e" alt="arrow">
-            </div>
-        </button>
-
-        <!-- Decorative Ellipses -->
-        <div class="ellipse ellipse-1"></div>
-        <div class="ellipse ellipse-2"></div>
-        <div class="ellipse ellipse-3"></div>
-        <div class="ellipse ellipse-4"></div>
-        <div class="ellipse ellipse-5"></div>
-        <div class="ellipse ellipse-6"></div>
-        <div class="ellipse ellipse-7"></div>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-line-1"></div>
-            <div class="footer-line-2"></div>
-            <p class="footer-text">© 2025 Senior Advisors Movilizadores, S.L. Todos los derechos reservados</p>
+            <div class="footer-background">
+                <img src="https://www.figma.com/api/mcp/asset/a2145f03-e94e-4ca3-9156-8dd32b6147b7" alt="Footer Background">
+                <div class="footer-overlay"></div>
+            </div>
+            <div class="footer-yellow-line"></div>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://www.figma.com/api/mcp/asset/e13347a5-db01-4c1e-8937-fa52b01c0319" alt="Senior Advisors Logo">
+                </div>
+                <div class="footer-links-left">
+                    <p><a href="#">Trabaja con nosotros</a></p>
+                    <p><a href="#">Aviso legal y política de privacidad</a></p>
+                </div>
+                <div class="footer-links-right">
+                    <a href="servicios.html">SERVICIOS</a>
+                    <a href="conocenos.html">CONÓCENOS</a>
+                    <a href="contacto.html">CONTACTO</a>
+                    <a href="blog.html">BLOG</a>
+                </div>
+                <p class="footer-copyright">© 2025 Senior Advisors Movilizadores, S.L. Todos los derechos reservados</p>
+            </div>
         </footer>
     </div>
 </body>
 </html>
-
