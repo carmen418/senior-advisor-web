@@ -10,10 +10,12 @@
 
 /* Navigation Bar - ORIGINAL DESIGN */
 .navigation {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 94.5rem; /* 1512px */
     height: 5.625rem; /* 90px */
     background-color: #0b1324;
     display: flex;
