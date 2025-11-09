@@ -64,8 +64,8 @@
             <h2 class="faq-title-conocenos">PREGUNTAS FRECUENTES</h2>
             
             <div class="faq-container-conocenos">
-                <!-- FAQ 1 -->
-                <div class="faq-item-conocenos">
+                <!-- FAQ 1: Text Answer -->
+                <div class="faq-item-conocenos faq-type-text">
                     <button class="faq-question-conocenos">
                         <p>¿Qué es un Senior Advisor?</p>
                         <div class="faq-icon-conocenos">
@@ -75,10 +75,13 @@
                             </svg>
                         </div>
                     </button>
+                    <div class="faq-answer-conocenos faq-answer-text">
+                        <p>Un aliado silencioso que acompaña desde la experiencia, con visión estratégica y mirada humana. No dice que hacer: piensa contigo lo que nadie más se atreve a plantear. </p>
+                    </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="faq-item-conocenos">
+                <!-- FAQ 2: Badges Answer -->
+                <div class="faq-item-conocenos faq-type-badges">
                     <button class="faq-question-conocenos">
                         <p>¿Por qué contar con un Senior Advisor?</p>
                         <div class="faq-icon-conocenos">
@@ -88,10 +91,24 @@
                             </svg>
                         </div>
                     </button>
+                    <div class="faq-answer-conocenos faq-answer-badges">
+                        <div class="faq-badges-grid">
+                            <div class="faq-badge">VISIÓN EXTERNA Y OBJETIVA</div>
+                            <div class="faq-badge">REDUCCIÓN DE RIESGOS EN LA TOMA DE DECISIONES</div>
+                            <div class="faq-badge">RED DE CONTACTOS ESTRATÉGICOS</div>
+                            <div class="faq-badge">FACILITA PROCESOS DE SUCESIÓN Y LIDERAZGO</div>
+                            <div class="faq-badge">ACOMPAÑAMIENTO EN EJECUCIÓN, NO SOLO EN DIAGNÓSTICO</div>
+                            <div class="faq-badge">TRANSFERENCIA DE CONOCIMIENTO</div>
+                            <div class="faq-badge">PUENTE ENTRE TRADICIÓN E INNOVACIÓN</div>
+                            <div class="faq-badge">ESTRATEGIA GLOBAL DE TALENTO</div>
+                            <div class="faq-badge">EMPRESA FAMILIAR</div>
+                            <div class="faq-badge">APOYA LA EJECUCIÓN EFECTIVA DE PLANES ESTRATÉGICOS</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- FAQ 3 -->
-                <div class="faq-item-conocenos">
+                <!-- FAQ 3: Comparison Table -->
+                <div class="faq-item-conocenos faq-type-table">
                     <button class="faq-question-conocenos">
                         <p>¿En qué se diferencia de un consultor tradicional?</p>
                         <div class="faq-icon-conocenos">
@@ -101,6 +118,33 @@
                             </svg>
                         </div>
                     </button>
+                    <div class="faq-answer-conocenos faq-answer-table">
+                        <div class="faq-table-bg">
+                            <img src="https://www.figma.com/api/mcp/asset/9c9ad1a3-d321-4b98-bfd8-4a0f95e41f6e" alt="Table Background">
+                        </div>
+                        <div class="faq-table">
+                            <div class="faq-table-headers">
+                                <h3>SENIOR ADVISOR</h3>
+                                <h3>CONSULTOR</h3>
+                            </div>
+                            <div class="faq-table-content">
+                                <div class="faq-table-column">
+                                    <p>Acompaña desde dentro</p>
+                                    <p>Co-crea soluciones</p>
+                                    <p>Transfiere conocimiento</p>
+                                    <p>Relación de confianza en medio-largo plazo</p>
+                                    <p>Foco negocio sostenible</p>
+                                </div>
+                                <div class="faq-table-column">
+                                    <p>Analiza desde fuera</p>
+                                    <p>Gestiona y entrega proyectos</p>
+                                    <p>Propone estrategias</p>
+                                    <p>Genera relación puntual</p>
+                                    <p>Foco ejecución operativo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,5 +183,28 @@
             <p class="footer-copyright-conocenos">© 2025 Senior Advisors Movilizadores, S.L. Todos los derechos reservados</p>
         </footer>
     </div>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item-conocenos');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question-conocenos');
+                
+                button.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // If it wasn't active, open it
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
