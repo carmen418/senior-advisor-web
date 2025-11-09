@@ -4,57 +4,64 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Base: 1rem = 16px */
+    font-size: 16px;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 .backdrop-conocenos {
     background-color: #0b1324;
     position: relative;
-    width: 1512px;
-    height: 2788px;
+    width: 100%;
+    max-width: 94.5rem; /* 1512px */
+    min-height: 176.75rem; /* 2828px */
+    height: auto;
     margin: 0 auto;
 }
 
-/* Navigation - Same as other pages */
+/* Navigation Bar */
 .navigation {
-    position: fixed;
-    left: 50%;
+    position: absolute;
     top: 0;
-    transform: translateX(-50%);
-    width: 1512px;
-    height: 90px;
+    left: 0;
+    width: 100%;
+    height: 5.625rem; /* 90px */
     background-color: #0b1324;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 0 0 10px;
+    justify-content: flex-end;
+    padding-left: 0.625rem; /* 10px */
+    padding-right: 0;
     box-sizing: border-box;
     z-index: 1000;
+    gap: 17.5625rem; /* 281px */
 }
 
 .nav-content {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: 281px;
 }
 
 .nav-items {
     display: flex;
-    gap: 45px;
+    gap: 2.8125rem; /* 45px */
     align-items: center;
 }
 
 .nav-item {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     color: white;
-    letter-spacing: 0.48px;
-    padding: 6px 12px;
+    letter-spacing: 0.03rem; /* 0.48px */
+    padding: 0.375rem 0.75rem; /* 6px 12px */
     cursor: pointer;
     transition: opacity 0.3s;
     text-decoration: none;
@@ -65,8 +72,8 @@ body {
 }
 
 .logo-container {
-    width: 179px;
-    height: 78px;
+    width: 11.1875rem; /* 179px */
+    height: 4.875rem; /* 78px */
 }
 
 .logo-container img {
@@ -75,738 +82,607 @@ body {
     object-fit: cover;
 }
 
+.hamburger {
+    display: none;
+}
+
 /* Hero Section */
-.hero-section {
+.hero-section-conocenos {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 1512px;
-    height: 469px;
-    border-radius: 10px;
+    left: 0;
+    width: 100%;
+    height: 30.0625rem; /* 481px */
     overflow: hidden;
 }
 
-.hero-image {
+.hero-image-conocenos {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.hero-image img {
+.hero-image-conocenos img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-.hero-overlay {
+.hero-overlay-conocenos {
     position: absolute;
     left: 0;
-    top: 60px;
-    width: 1512px;
-    height: 414px;
+    top: 3.75rem; /* 60px */
+    width: 100%;
+    height: 26.3125rem; /* 421px */
     background-color: rgba(11, 19, 36, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0.625rem; /* 10px */
 }
 
-.hero-title {
+.hero-title-conocenos {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 45px;
-    line-height: 1;
-    letter-spacing: 1.35px;
-    background: linear-gradient(134.17deg, #a7becf 0%, #0857a0 100%);
+    font-size: 2.8125rem; /* 45px */
+    line-height: normal;
+    letter-spacing: 0.084375rem; /* 1.35px */
+    background: linear-gradient(to right, #a7becf 0%, #d9d9d9 134.17%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    width: 1251px;
+    width: 78.1875rem; /* 1251px */
+    max-width: 100%;
     white-space: pre-wrap;
+    text-align: left;
 }
 
-/* Subtitle Text */
-.subtitle-text {
+/* Subtitle Section */
+.subtitle-text-conocenos {
     position: absolute;
-    left: 131px;
-    top: 546px;
-    width: 1213px;
+    left: 8.1875rem; /* 131px */
+    top: 34.125rem; /* 546px */
+    width: 75.8125rem; /* 1213px */
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 1;
-    letter-spacing: 0.96px;
+    font-size: 2rem; /* 32px */
+    line-height: normal;
+    letter-spacing: 0.06rem; /* 0.96px */
     color: #66a0cb;
-    white-space: pre-wrap;
 }
 
 /* Profiles Section */
-.profiles-section {
+.profiles-section-conocenos {
     position: absolute;
     left: 0;
-    top: 713px;
-    width: 1512px;
-    height: 808px;
+    top: 44.5625rem; /* 713px */
+    width: 100%;
+    height: 50.5rem; /* 808px */
 }
 
-.profile-container {
+.profile-container-conocenos {
     position: absolute;
 }
 
-.profile-left {
-    left: 131px;
+.profile-left-conocenos {
+    left: 8.1875rem; /* 131px */
     top: 0;
-    width: 681px;
+    width: 42.5625rem; /* 681px */
 }
 
-.profile-right {
-    left: 824px;
+.profile-right-conocenos {
+    left: 51.5rem; /* 824px */
     top: 0;
-    width: 664px;
+    width: 41.5rem; /* 664px */
 }
 
-.profile-image-blur {
+.profile-image-blur-conocenos {
     position: absolute;
-    width: 364px;
+    width: 22.75rem; /* 364px */
     overflow: hidden;
+    filter: blur(1.875rem); /* 30px */
 }
 
-.profile-left .profile-image-blur {
-    left: 71px;
-    top: 17px;
-    height: 380px;
+.profile-left-conocenos .profile-image-blur-conocenos {
+    left: 12.625rem; /* 202px */
+    top: 1.0625rem; /* 17px */
+    height: 23.75rem; /* 380px */
 }
 
-.profile-right .profile-image-blur {
-    left: 64px;
+.profile-right-conocenos .profile-image-blur-conocenos {
+    left: 5.5rem; /* 88px */
     top: 0;
-    height: 397px;
+    height: 24.8125rem; /* 397px */
 }
 
-.profile-image-blur img {
+.profile-image-blur-conocenos img {
     width: 100%;
     height: auto;
     display: block;
-    position: relative;
 }
 
-.profile-image-blur::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60%;
-    background: linear-gradient(to top, rgba(11, 19, 36, 1) 0%, transparent 100%);
-    filter: blur(30px);
-    z-index: 1;
-}
-
-.profile-name {
+.profile-name-conocenos {
     position: absolute;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 45px;
-    line-height: 1;
-    letter-spacing: 1.35px;
-    background: linear-gradient(134.17deg, #a7becf 0%, #0857a0 100%);
+    font-size: 2.8125rem; /* 45px */
+    line-height: normal;
+    letter-spacing: 0.084375rem; /* 1.35px */
+    background: linear-gradient(to right, #a7becf 0%, #0857a0 134.17%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    width: 477px;
+    width: 29.8125rem; /* 477px */
     white-space: pre-wrap;
 }
 
-.profile-left .profile-name {
+.profile-left-conocenos .profile-name-conocenos {
     left: 0;
-    top: 419px;
+    top: 26.1875rem; /* 419px */
 }
 
-.profile-right .profile-name {
+.profile-right-conocenos .profile-name-conocenos {
     left: 0;
-    top: 419px;
+    top: 26.1875rem; /* 419px */
 }
 
-.profile-role {
+.profile-role-conocenos {
     position: absolute;
     font-family: 'Afacad', sans-serif;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 1;
-    letter-spacing: 0.96px;
+    font-size: 2rem; /* 32px */
+    line-height: normal;
+    letter-spacing: 0.06rem; /* 0.96px */
     color: #a7becf;
 }
 
-.profile-left .profile-role {
+.profile-left-conocenos .profile-role-conocenos {
     left: 0;
-    top: 472px;
-    width: 569px;
+    top: 29.5rem; /* 472px */
+    width: 35.5625rem; /* 569px */
 }
 
-.profile-right .profile-role {
+.profile-right-conocenos .profile-role-conocenos {
     left: 0;
-    top: 472px;
+    top: 29.5rem; /* 472px */
 }
 
-.profile-bio {
+.profile-bio-conocenos {
     position: absolute;
-    width: 554px;
+    width: 34.625rem; /* 554px */
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.375rem; /* 22px */
     line-height: 1.5;
-    letter-spacing: 1px;
+    letter-spacing: 0.055rem; /* 0.88px */
     color: #d9d9d9;
-    text-shadow: 0px 0px 30px #000000;
-    text-indent: 0;
+    text-shadow: 0 0 1.875rem #000000; /* 30px */
 }
 
-.profile-left .profile-bio {
+.profile-left-conocenos .profile-bio-conocenos {
     left: 0;
-    top: 580px;
+    top: 36.25rem; /* 580px */
 }
 
-.profile-right .profile-bio {
+.profile-right-conocenos .profile-bio-conocenos {
     left: 0;
-    top: 537px;
+    top: 33.5625rem; /* 537px */
 }
 
-.profile-bio strong {
+.profile-bio-conocenos strong {
     font-weight: 700;
 }
 
-/* Divider Line */
-.divider-line {
+/* FAQ Background */
+.faq-background-conocenos {
     position: absolute;
-    left: 33px;
-    top: 1815px;
-    width: 1444px;
-    height: 4px;
-    background-color: #efb801;
+    top: 111.9375rem; /* 1791px */
+    left: 0;
+    width: 100%;
+    height: 37.0625rem; /* 593px */
+    overflow: hidden;
+    z-index: 0;
+}
+
+.faq-background-conocenos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faq-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* FAQ Section */
-.faq-section {
+.faq-section-conocenos {
     position: absolute;
-    left: 32px;
-    top: 1865px;
-    width: 1444px;
+    top: 116.5625rem; /* 1865px */
+    left: 2.0625rem; /* 33px */
+    width: 90.25rem; /* 1444px */
+    z-index: 1;
 }
 
-.faq-title {
+.faq-title-conocenos {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 1;
-    letter-spacing: 1.5px;
+    font-size: 3.125rem; /* 50px */
+    line-height: normal;
+    letter-spacing: 0.09375rem; /* 1.5px */
     color: #f2f2f2;
-    margin-bottom: 113px;
+    margin-bottom: 7.0625rem; /* 113px */
 }
 
-.faq-container {
+.faq-container-conocenos {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem; /* 24px */
 }
 
-.faq-item {
+.faq-item-conocenos {
     position: relative;
-    background-color: #002d5c;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 100%;
+}
+
+.faq-question-conocenos {
+    width: 100%;
+    background-color: #a7becf;
+    border: none;
+    border-radius: 0.625rem; /* 10px */
+    padding: 1.3125rem 2.125rem; /* 21px 34px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4.3125rem; /* 69px */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 21px 34px;
-    min-height: 69px;
+.faq-question-conocenos:hover {
+    opacity: 0.9;
 }
 
-.faq-question p {
+.faq-question-conocenos p {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 1;
-    letter-spacing: 0.6px;
-    color: white;
+    font-size: 1.25rem; /* 20px */
+    line-height: normal;
+    letter-spacing: 0.0375rem; /* 0.6px */
+    color: #0b1324;
     text-align: center;
+    margin: 0;
 }
 
-.faq-icon {
-    width: 25px;
-    height: 25px;
+.faq-icon-conocenos {
+    width: 1.5625rem; /* 25px */
+    height: 1.5625rem; /* 25px */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
-.faq-icon img {
+.faq-icon-conocenos svg {
     width: 100%;
     height: 100%;
 }
 
-.faq-item.active .faq-icon {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.faq-item.active {
-    background-color: #d9d9d9;
-}
-
-/* FAQ Type: Text Answer */
-.faq-type-text.active .faq-answer {
-    max-height: 200px;
-    padding: 10px 25px;
-    backdrop-filter: blur(50px);
-}
-
-.faq-answer p {
-    font-family: 'Afacad', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.72px;
-    color: #0f2336;
-    width: 1372px;
-    max-width: 100%;
-}
-
-/* FAQ Type: Badges Answer */
-.faq-type-badges.active .faq-answer {
-    max-height: 500px;
-    padding: 32px 34px;
-}
-
-.faq-answer-badges {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.faq-badges-row {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.faq-badge {
-    background-color: #a7becf;
-    backdrop-filter: blur(50px);
-    border-radius: 20px;
-    padding: 10px;
-    font-family: 'Afacad', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.72px;
-    color: #194860;
-    display: inline-block;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-/* FAQ Type: Table Answer */
-.faq-type-table.active .faq-answer {
-    max-height: 450px;
-    padding: 32px 299px 20px 299px;
-    position: relative;
-}
-
-.faq-answer-table {
-    position: relative;
-}
-
-.faq-table-bg {
+/* Quote Section */
+.quote-section-conocenos {
     position: absolute;
-    left: 299px;
-    top: 97px;
-    width: 845px;
-    height: 292px;
-    z-index: 0;
-}
-
-.faq-table {
-    position: relative;
+    top: 152.875rem; /* 2446px */
+    left: 0;
+    width: 100%;
     z-index: 1;
 }
 
-.faq-table-header {
-    display: flex;
-    gap: 100px;
-    margin-bottom: 30px;
-}
-
-.faq-table-col {
-    flex: 1;
+.quote-text-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.1875rem; /* 35px */
+    line-height: 1.5;
+    letter-spacing: 0.065625rem; /* 1.05px */
+    color: #d9d9d9;
     text-align: center;
-}
-
-.faq-table-col h3 {
-    font-family: 'Anton', sans-serif;
-    font-size: 40px;
-    line-height: 1;
-    letter-spacing: 1.2px;
-    color: #54555d;
-    margin: 0;
-}
-
-.faq-table-body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.faq-table-row {
-    display: flex;
-    gap: 100px;
-}
-
-.faq-table-cell {
-    flex: 1;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.7;
-    letter-spacing: 0.6px;
-    color: #54555d;
+    width: 79.5rem; /* 1272px */
+    max-width: 90%;
+    margin: 0 auto;
+    white-space: pre-wrap;
 }
 
 /* Footer */
-.footer {
+.footer-conocenos {
     position: absolute;
+    top: 163.25rem; /* 2612px */
     left: 0;
-    top: 2631px;
-    width: 1512px;
-    height: 157px;
+    width: 100%;
+    height: 14.4375rem; /* 231px */
     background-color: #0b1324;
     overflow: hidden;
 }
 
-.footer-line-1 {
+.footer-background-conocenos {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 1512px;
-    height: 8px;
-    background-color: #efb801;
-}
-
-.footer-line-2 {
-    position: absolute;
     left: 0;
-    top: 20px;
-    width: 1512px;
-    height: 8px;
-    background-color: #efb801;
-}
-
-.footer-text {
-    position: absolute;
-    right: 23px;
-    top: 102px;
-    font-family: 'Afacad', sans-serif;
-    font-size: 20px;
-    letter-spacing: 0.6px;
-    color: white;
-    text-align: right;
-}
-
-/* ====================
-   RESPONSIVE DESIGN
-   ==================== */
-
-/* Mobile Navigation */
-.hamburger {
-    display: none;
-    position: absolute;
-    right: 25px;
-    top: 23px;
-    width: 25px;
-    height: 12px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hamburger img {
     width: 100%;
     height: 100%;
 }
 
-/* Tablet and Below - 1024px */
-@media screen and (max-width: 1024px) {
-    .backdrop-conocenos {
-        width: 100%;
-        height: auto;
-    }
-
-    .navigation {
-        width: 100%;
-    }
-
-    .hero-section {
-        width: 100%;
-    }
-
-    .profiles-section {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        padding: 2rem;
-    }
-
-    .profile-container {
-        position: static;
-    }
+.footer-background-conocenos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Mobile - 768px and Below */
-@media screen and (max-width: 768px) {
-    /* Layout */
-    .backdrop-conocenos {
-        width: 100%;
-        max-width: 393px;
-        height: auto;
-    }
+.footer-overlay-conocenos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-    /* Navigation */
-    .navigation {
+.footer-yellow-line-conocenos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem; /* 8px */
+    background-color: #efb801;
+    z-index: 1;
+}
+
+.footer-content-conocenos {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo-conocenos {
+    position: absolute;
+    left: 3.625rem; /* 58px */
+    top: 3.5625rem; /* 57px */
+    width: 11.1875rem; /* 179px */
+    height: 4.875rem; /* 78px */
+}
+
+.footer-logo-conocenos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-links-left-conocenos {
+    position: absolute;
+    left: 18.25rem; /* 292px */
+    top: 4.5625rem; /* 73px */
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem; /* 30px */
+}
+
+.footer-links-left-conocenos p {
+    margin: 0;
+}
+
+.footer-links-left-conocenos a {
+    font-family: 'Afacad', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem; /* 20px */
+    letter-spacing: 0.0375rem; /* 0.6px */
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links-left-conocenos a:hover {
+    text-decoration: underline;
+}
+
+.footer-links-right-conocenos {
+    position: absolute;
+    left: 48.125rem; /* 770px */
+    top: 3.625rem; /* 58px */
+    display: flex;
+    gap: 2.5rem; /* 40px */
+    align-items: center;
+}
+
+.footer-links-right-conocenos a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.875rem; /* 30px */
+    letter-spacing: 0.075rem; /* 1.2px */
+    color: #efb801;
+    text-decoration: none;
+}
+
+.footer-links-right-conocenos a:hover {
+    opacity: 0.8;
+}
+
+.footer-copyright-conocenos {
+    position: absolute;
+    bottom: 5.1875rem; /* 83px - adjusted for proper positioning from bottom */
+    right: 1.5625rem; /* 25px */
+    font-family: 'Afacad', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem; /* 20px */
+    letter-spacing: 0.0375rem; /* 0.6px */
+    color: white;
+    text-align: right;
+    margin: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    right: 92.9375rem; /* 1487px */
+}
+
+/* ====================
+   RESPONSIVE ADAPTATIONS
+   ==================== */
+
+@media screen and (max-width: 90rem) {
+    /* Tablet adjustments */
+    .backdrop-conocenos {
+        max-width: 100%;
+    }
+    
+    .hero-section-conocenos,
+    .subtitle-text-conocenos,
+    .profiles-section-conocenos,
+    .faq-section-conocenos,
+    .quote-section-conocenos,
+    .footer-conocenos {
+        position: relative;
         width: 100%;
-        height: 60px;
+        height: auto;
+        left: auto;
+        top: auto;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+    
+    .hero-section-conocenos {
+        margin: 0;
         padding: 0;
     }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-content {
-        display: none;
-        margin-right: 0;
-    }
-
-    .logo-container {
-        display: none;
-    }
-
-    /* Hero Section */
-    .hero-section {
-        left: 0;
-        top: 0;
-        width: 100%;
-        max-width: 393px;
-        height: 350px;
-    }
-
-    .hero-overlay {
-        top: 60px;
-        width: 100%;
-        height: auto;
-        padding: 2rem 1rem;
-    }
-
-    .hero-title {
-        font-size: 28px;
-        letter-spacing: 0.84px;
-        width: 100%;
-    }
-
-    /* Subtitle */
-    .subtitle-text {
-        position: static;
-        width: 100%;
-        padding: 2rem 1rem;
-        font-size: 20px;
-        letter-spacing: 0.6px;
-    }
-
-    /* Profiles Section */
-    .profiles-section {
-        position: static;
+    
+    .profiles-section-conocenos {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        padding: 2rem 1rem;
-        width: 100%;
-        height: auto;
     }
-
-    .profile-container {
-        position: static;
-        width: 100%;
+    
+    .profile-container-conocenos {
+        position: relative;
+        left: auto !important;
+        top: auto !important;
+        width: 100% !important;
     }
-
-    .profile-image-blur {
-        position: static;
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        margin: 0 auto 2rem;
-        aspect-ratio: 364/397;
-    }
-
-    .profile-name {
-        position: static;
-        width: 100%;
-        font-size: 32px;
-        letter-spacing: 0.96px;
+    
+    .profile-image-blur-conocenos,
+    .profile-name-conocenos,
+    .profile-role-conocenos,
+    .profile-bio-conocenos {
+        position: relative;
+        left: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 100%;
         margin-bottom: 1rem;
     }
-
-    .profile-role {
-        position: static;
-        width: 100%;
-        font-size: 20px;
-        letter-spacing: 0.6px;
-        margin-bottom: 1rem;
-    }
-
-    .profile-bio {
-        position: static;
-        width: 100%;
-        font-size: 18px;
-        letter-spacing: 0.72px;
-    }
-
-    /* Divider Line */
-    .divider-line {
-        position: static;
-        width: 100%;
+    
+    .faq-background-conocenos {
+        position: relative;
+        top: auto;
         margin: 2rem 0;
     }
-
-    /* FAQ Section */
-    .faq-section {
-        position: static;
+    
+    .footer-logo-conocenos,
+    .footer-links-left-conocenos,
+    .footer-links-right-conocenos,
+    .footer-copyright-conocenos {
+        position: relative;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+    
+    .footer-content-conocenos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        justify-content: center;
+    }
+    
+    .footer-copyright-conocenos {
         width: 100%;
-        padding: 2rem 1rem;
-    }
-
-    .faq-title {
-        font-size: 32px;
-        letter-spacing: 0.96px;
-        margin-bottom: 2rem;
-    }
-
-    .faq-container {
-        gap: 1rem;
-    }
-
-    .faq-question {
-        padding: 1rem;
-    }
-
-    .faq-question p {
-        font-size: 16px;
-        letter-spacing: 0.48px;
-        text-align: left;
-    }
-
-    .faq-answer p {
-        font-size: 16px;
-        letter-spacing: 0.48px;
-    }
-
-    /* FAQ Badges Mobile */
-    .faq-type-badges.active .faq-answer {
-        max-height: 800px;
-        padding: 1rem;
-    }
-
-    .faq-badge {
-        font-size: 14px;
-        padding: 8px;
-        height: auto;
-        min-height: 40px;
-        white-space: normal;
         text-align: center;
     }
+}
 
-    .faq-badges-row {
-        gap: 8px;
+@media screen and (max-width: 48rem) {
+    /* Mobile adjustments */
+    .hamburger {
+        display: block;
+        width: 1.5625rem;
+        height: 1.125rem;
+        cursor: pointer;
     }
-
-    /* FAQ Table Mobile */
-    .faq-type-table.active .faq-answer {
-        max-height: 600px;
-        padding: 1rem;
+    
+    .hamburger img {
+        width: 100%;
+        height: 100%;
     }
-
-    .faq-table-bg {
+    
+    .navigation {
+        height: 3.75rem;
+        gap: 0;
+        justify-content: space-between;
+        padding: 0 1.25rem;
+    }
+    
+    .nav-content {
         display: none;
     }
-
-    .faq-table-header {
-        gap: 20px;
-        margin-bottom: 20px;
+    
+    .logo-container {
+        width: 7.5rem;
+        height: 3.25rem;
     }
-
-    .faq-table-col h3 {
-        font-size: 20px;
-        letter-spacing: 0.6px;
+    
+    .hero-title-conocenos {
+        font-size: clamp(1.5rem, 5vw, 2.8125rem);
     }
-
-    .faq-table-row {
-        gap: 20px;
+    
+    .subtitle-text-conocenos {
+        font-size: clamp(1.125rem, 4vw, 2rem);
+    }
+    
+    .profile-name-conocenos {
+        font-size: clamp(1.5rem, 5vw, 2.8125rem);
+    }
+    
+    .profile-role-conocenos {
+        font-size: clamp(1.125rem, 4vw, 2rem);
+    }
+    
+    .profile-bio-conocenos {
+        font-size: clamp(1rem, 3.5vw, 1.375rem);
+    }
+    
+    .faq-title-conocenos {
+        font-size: clamp(1.75rem, 6vw, 3.125rem);
+    }
+    
+    .faq-question-conocenos p {
+        font-size: clamp(0.875rem, 4vw, 1.25rem);
+        text-align: left;
+    }
+    
+    .quote-text-conocenos {
+        font-size: clamp(1.25rem, 5vw, 2.1875rem);
+    }
+    
+    .footer-links-right-conocenos {
         flex-direction: column;
+        gap: 1rem;
     }
-
-    .faq-table-cell {
-        font-size: 14px;
-        line-height: 1.5;
-        letter-spacing: 0.42px;
+    
+    .footer-links-right-conocenos a {
+        font-size: clamp(1.125rem, 4vw, 1.875rem);
     }
-
-    /* Footer */
-    .footer {
-        position: static;
-        width: 100%;
-        height: 146px;
-        margin-top: 2rem;
-    }
-
-    .footer-line-1,
-    .footer-line-2 {
-        width: 1512px;
-    }
-
-    .footer-text {
-        right: 13px;
-        top: 101px;
-        font-size: 10px;
-        letter-spacing: 0.3px;
-        width: 252px;
+    
+    .footer-copyright-conocenos {
+        font-size: clamp(0.75rem, 3vw, 1.25rem);
     }
 }
-
-/* Mobile - 480px and Below */
-@media screen and (max-width: 480px) {
-    .backdrop-conocenos {
-        max-width: 100%;
-    }
-
-    .hero-section,
-    .footer {
-        max-width: 100%;
-    }
-
-    .navigation {
-        width: 100%;
-    }
-}
-
