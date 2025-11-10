@@ -8,91 +8,55 @@
     box-sizing: border-box;
 }
 
+/* Root font-size for relative units */
+:root {
+    font-size: 16px; /* 1rem = 16px */
+}
+
 /* Main Backdrop */
 .backdrop-blog {
     position: relative;
-    width: 1512px;
-    min-height: 2617px;
+    width: 100%;
+    min-height: 150vh; /* adaptive to content */
     background-color: #0b1324;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Decorative Ellipses */
+/* Decorative Ellipses (Scaled with relative units) */
 .ellipse-decoration {
     position: absolute;
-    width: 511px;
-    height: 431px;
+    width: 33vw;
+    height: 28vw;
 }
 
-.ellipse-1 {
-    left: 1181px;
-    top: 626px;
-}
+.ellipse-1 { left: 78%; top: 39%; }
+.ellipse-2 { left: 30%; top: 55%; }
+.ellipse-3 { left: 9%; top: 3%; }
 
-.ellipse-1::before {
+.ellipse-decoration::before {
     content: '';
     position: absolute;
-    inset: -92.81% -78.28%;
-    background-image: url('https://www.figma.com/api/mcp/asset/0d10351f-a794-4e71-89e0-754138db781e');
-    background-size: cover;
-}
-
-.ellipse-2 {
-    left: 465px;
-    top: 897px;
-}
-
-.ellipse-2::before {
-    content: '';
-    position: absolute;
-    inset: -92.81% -78.28%;
-    background-image: url('https://www.figma.com/api/mcp/asset/0d10351f-a794-4e71-89e0-754138db781e');
-    background-size: cover;
-}
-
-.ellipse-3 {
-    left: 135px;
-    top: 45px;
-}
-
-.ellipse-3::before {
-    content: '';
-    position: absolute;
-    inset: -92.81% -78.28%;
-    background-image: url('https://www.figma.com/api/mcp/asset/0d10351f-a794-4e71-89e0-754138db781e');
+    inset: -100% -80%;
     background-size: cover;
 }
 
 /* Small Ellipses */
 .ellipse-decoration-small {
     position: absolute;
-    width: 192px;
-    height: 177px;
+    width: 12vw;
+    height: 11vw;
 }
 
-.ellipse-small-1 {
-    left: -57px;
-    top: 605px;
-}
+.ellipse-small-1 { left: -3.7%; top: 37%; }
+.ellipse-small-2 { left: 16.6%; top: 52%; }
 
-.ellipse-small-1::before {
+.ellipse-decoration-small::before {
     content: '';
     position: absolute;
-    inset: -169.49% -156.25%;
-    background-image: url('https://www.figma.com/api/mcp/asset/bb8e7e72-80f3-4e1a-aaeb-2461426436ed');
-    background-size: cover;
-}
-
-.ellipse-small-2 {
-    left: 251px;
-    top: 849px;
-}
-
-.ellipse-small-2::before {
-    content: '';
-    position: absolute;
-    inset: -169.49% -156.25%;
-    background-image: url('https://www.figma.com/api/mcp/asset/bb8e7e72-80f3-4e1a-aaeb-2461426436ed');
+    inset: -170% -155%;
     background-size: cover;
 }
 
@@ -100,245 +64,129 @@
 .blog-content {
     position: relative;
     z-index: 1;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 }
 
 /* Coming Soon Title */
+.coming-soon-title-container {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    text-align: center;
+    width: 100%;
+    padding: 5vh 2vw;
+    min-height: 50vh;
+}
+
 .coming-soon-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 354px;
-    width: 782px;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 40px;
-    line-height: normal;
-    letter-spacing: 1.2px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: 0.075rem; /* relative spacing */
     color: white;
     text-align: center;
-    white-space: pre-wrap;
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 /* Divider Line */
 .divider-line {
-    position: absolute;
-    left: 34px;
-    top: 714px;
-    width: 1444px;
-    height: 4px;
+    width: 90%;
+    height: 0.25rem;
     background-color: white;
+    margin: 2rem 0;
 }
 
 /* Blog Post Card */
 .blog-post-card {
-    position: absolute;
-    left: 81px;
-    top: 782px;
-    width: 1356px;
-    height: 237px;
+    width: 100%;
+    max-width: 85rem;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 2px;
+    border-radius: 0.125rem;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem;
 }
 
 /* Post Image */
 .post-image-container {
-    position: absolute;
-    left: 23px;
-    top: 18px;
-    width: 336px;
-    height: 201px;
+    flex: 1 1 20rem;
+    min-height: 12rem;
     background-color: #d9d9d9;
+    display: flex;
 }
 
 .post-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
 }
 
 /* Logo Watermark */
 .logo-watermark {
     position: absolute;
-    left: 101px;
-    top: 72px;
-    width: 179px;
-    height: 93px;
+    width: 11rem;
+    height: 5.8rem;
     opacity: 0.2;
-}
-
-.logo-watermark img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
 }
 
 /* Post Content */
 .post-content-container {
-    position: absolute;
-    left: 382px;
-    top: 63px;
+    flex: 2 1 25rem;
     display: flex;
-    align-items: center;
-    gap: 213px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .post-text {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 627px;
+    gap: 0.5rem;
 }
 
 .post-title {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 36px;
-    line-height: normal;
-    letter-spacing: 1.08px;
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    line-height: 1.2;
     color: #0857a0;
 }
 
 .post-subtitle {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 22px;
-    line-height: normal;
-    letter-spacing: 0.66px;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.2;
     color: #0857a0;
 }
 
 .post-date {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: 18px;
-    line-height: normal;
-    letter-spacing: 0.54px;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.2;
     color: #002d5c;
 }
 
 /* Post Arrow */
 .post-arrow {
-    width: 98px;
-    height: 23px;
+    width: 6rem;
+    height: 1.5rem;
 }
 
 .post-arrow img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
 }
 
 /* Footer styles are in footer.css */
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-    .backdrop-blog {
-        width: 100%;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .coming-soon-title {
-        left: 50%;
-        top: 200px;
-        width: 90%;
-        font-size: 32px;
-    }
-
-    .divider-line {
-        left: 20px;
-        top: 450px;
-        width: calc(100% - 40px);
-    }
-
-    .blog-post-card {
-        left: 20px;
-        top: 500px;
-        width: calc(100% - 40px);
-        height: auto;
-        min-height: 400px;
-    }
-
-    .post-image-container {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 250px;
-        margin: 20px 0;
-    }
-
-    .logo-watermark {
-        display: none;
-    }
-
-    .post-content-container {
-        position: relative;
-        left: 0;
-        top: 0;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .post-text {
-        width: 100%;
-    }
-
-    .post-title {
-        font-size: 28px;
-    }
-
-    .post-subtitle {
-        font-size: 18px;
-    }
-
-    .post-arrow {
-        width: 60px;
-        height: auto;
-    }
-
-    .footer {
-        position: relative;
-        top: 0;
-        margin-top: 100px;
-        width: 100%;
-    }
-
-    .footer-text {
-        width: calc(100% - 46px);
-        right: 23px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .coming-soon-title {
-        font-size: 24px;
-        top: 150px;
-    }
-
-    .divider-line {
-        top: 350px;
-    }
-
-    .blog-post-card {
-        top: 400px;
-    }
-
-    .post-title {
-        font-size: 24px;
-    }
-
-    .post-subtitle {
-        font-size: 16px;
-    }
-
-    .post-date {
-        font-size: 14px;
-    }
-}
-

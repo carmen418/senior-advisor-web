@@ -20,7 +20,7 @@
         <!-- Hero Section -->
         <section class="hero-section-conocenos">
             <div class="hero-image-conocenos">
-                <img src="https://www.figma.com/api/mcp/asset/855eed84-0136-4fec-a0ae-6afe2eb9a8b8" alt="Hero Background">
+                <img src="assets/conocenos_header.jpg" alt="Hero Background">
             </div>
             <div class="hero-overlay-conocenos">
                 <p class="hero-title-conocenos">Creemos en el poder de la sabiduría y las conversaciones transformadoras</p>
@@ -37,7 +37,7 @@
             <!-- Juan Carlos Cubeiro -->
             <div class="profile-container-conocenos profile-left-conocenos">
                 <div class="profile-image-blur-conocenos">
-                    <img src="https://www.figma.com/api/mcp/asset/b8310b00-13c1-4ecd-928e-0bac48b26bea" alt="Juan Carlos Cubeiro">
+                    <img src="assets/juan_carlos.png" alt="Juan Carlos Cubeiro">
                 </div>
                 <h2 class="profile-name-conocenos">Juan Carlos Cubeiro</h2>
                 <p class="profile-role-conocenos">Presidente Club Senior Advisors & Senior Advisor Principal</p>
@@ -47,7 +47,7 @@
             <!-- Maria José Martín -->
             <div class="profile-container-conocenos profile-right-conocenos">
                 <div class="profile-image-blur-conocenos">
-                    <img src="https://www.figma.com/api/mcp/asset/d138ca88-d33e-4cf2-95c0-2a95b4d570a1" alt="Maria José Martín">
+                    <img src="assets/maria_jose.png" alt="Maria José Martín">
                 </div>
                 <h2 class="profile-name-conocenos">Maria José Martín</h2>
                 <p class="profile-role-conocenos">CEO & Senior Advisor Principal</p>
@@ -57,7 +57,7 @@
 
         <!-- FAQ Background Image -->
         <div class="faq-background-conocenos">
-            <img src="https://www.figma.com/api/mcp/asset/d722709f-7d61-4612-892b-af8912ffeb7c" alt="FAQ Background">
+            <img src="assets/preguntas_frecuentes.jpg" alt="FAQ Background">
             <div class="faq-background-overlay"></div>
         </div>
 
@@ -161,27 +161,5 @@
     </div>
 
     <script src="footer.js"></script>
-    <script>
-        // FAQ Toggle Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item-conocenos');
-            
-            faqItems.forEach(item => {
-                const button = item.querySelector('.faq-question-conocenos');
-                
-                button.addEventListener('click', function() {
-                    const isActive = item.classList.contains('active');
-                    
-                    // Close all FAQ items
-                    faqItems.forEach(faq => faq.classList.remove('active'));
-                    
-                    // If it wasn't active, open it
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

@@ -17,32 +17,34 @@
 
         <!-- Decorative Background Ellipses -->
         <div class="ellipse-decoration ellipse-1" data-node-id="338-896"></div>
-        <div class="ellipse-decoration ellipse-2" data-node-id="338-897"></div>
-        <div class="ellipse-decoration ellipse-3" data-node-id="338-898"></div>
         <div class="ellipse-decoration-small ellipse-small-1" data-node-id="338-899"></div>
         <div class="ellipse-decoration-small ellipse-small-2" data-node-id="338-900"></div>
 
         <!-- Main Content -->
         <div class="blog-content">
             <!-- Coming Soon Message -->
-            <h1 class="coming-soon-title" data-node-id="338-946">Proximamente podrás disfrutas de contenidos multimedia gratuitos</h1>
+            <div class="coming-soon-title-container">
+                <h1 class="coming-soon-title" data-node-id="338-946">
+                    Proximamente podrás disfrutar de contenidos multimedia gratuitos
+                </h1>
+            </div>
 
             <!-- Divider Line -->
             <div class="divider-line" data-node-id="338-948"></div>
 
             <!-- Blog Post Card -->
-            <article class="blog-post-card" data-node-id="338-950">
-                <!-- Post Image -->
+            <!--<article class="blog-post-card" data-node-id="338-950">
+                Post Image 
                 <div class="post-image-container" data-node-id="338-951">
                     <img src="https://www.figma.com/api/mcp/asset/1d7d6f1f-4926-49cc-bc23-79e7df7aae66" alt="Post Image">
                 </div>
 
-                <!-- Logo Watermark -->
+                Logo Watermark 
                 <div class="logo-watermark" data-node-id="338-958">
                     <img src="https://www.figma.com/api/mcp/asset/76fb927c-9dbb-4a84-8361-cb8040120a2c" alt="Logo">
                 </div>
 
-                <!-- Post Content -->
+                Post Content
                 <div class="post-content-container" data-node-id="338-952">
                     <div class="post-text" data-node-id="338-953">
                         <h2 class="post-title" data-node-id="338-954">Título de entrada/publicación</h2>
@@ -51,30 +53,15 @@
                     </div>
 
                     <div class="post-arrow" data-node-id="338-957">
-                        <img src="https://www.figma.com/api/mcp/asset/909cf223-6c79-4788-9ebf-21cbf2a84c6b" alt="Arrow">
+                        <img src="assets/arrow_gif.gif" alt="Arrow">
                     </div>
                 </div>
-            </article>
+            </article>-->
         </div>
-
-        <!-- Footer -->
-        <div id="footer-container"></div>
     </div>
-
+    <!-- Footer -->
+    <div id="footer-container"></div>
     <script src="footer.js"></script>
-    <script>
-        // Mobile Navigation Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navContent = document.querySelector('.nav-content');
-            
-            if (hamburger && navContent) {
-                hamburger.addEventListener('click', function() {
-                    navContent.classList.toggle('active');
-                });
-            }
-        });
-    </script>
 </body>
 </html>
 
