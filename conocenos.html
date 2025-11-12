@@ -55,11 +55,7 @@
             </div>
         </section>
 
-        <!-- FAQ Background Image -->
-        <div class="faq-background-conocenos">
-            <img src="assets/preguntas_frecuentes.jpg" alt="FAQ Background">
-            <div class="faq-background-overlay"></div>
-        </div>
+        <!-- FAQ Section -->
 
         <!-- FAQ Section -->
         <section class="faq-section-conocenos">
@@ -161,5 +157,46 @@
     </div>
 
     <script src="footer.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item-conocenos');
+
+            const closeAllFaqs = () => {
+                faqItems.forEach(faq => {
+                    faq.classList.remove('active');
+                    const answer = faq.querySelector('.faq-answer-conocenos');
+                    if (answer) {
+                        answer.style.maxHeight = null;
+                    }
+                });
+            };
+
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question-conocenos');
+                const answer = item.querySelector('.faq-answer-conocenos');
+
+                if (!button || !answer) return;
+
+                button.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+
+                    closeAllFaqs();
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const activeAnswer = document.querySelector('.faq-item-conocenos.active .faq-answer-conocenos');
+                if (activeAnswer) {
+                    activeAnswer.style.maxHeight = activeAnswer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

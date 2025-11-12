@@ -30,15 +30,19 @@ body {
 /* Hero Section */
 .hero-section-contacto {
     position: relative;
-    min-height: 100vh; /* 892px */
-    width: 100%; /* 892px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* at least full viewport height */
+    width: 100%;
     overflow: hidden;
 }
 
 .hero-background-contacto {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    z-index: 0;
 }
 
 .hero-background-contacto img {
@@ -47,18 +51,27 @@ body {
     object-fit: cover;
 }
 
-.hero-overlay-contacto {
+.hero-background-overlay-contacto {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-overlay-contacto {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
 }
 
 .hero-title-contacto {
     position: relative;
-    margin-top: 12%;
+    margin-top: 15%;
     text-align: center;
     font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1.2;
@@ -69,17 +82,17 @@ body {
 /* Interactive Cards Section */
 .cards-section-contacto {
     position: relative;
-    margin-top: 10%;
     width: 100%;
     display: flex;
     gap: 3rem; /* 40px */
     justify-content: center;
+    flex-wrap: wrap; /* allow cards to wrap on smaller screens */
 }
 
 .interactive-card-contacto {
     position: relative;
-    width: 36.6875rem; /* 587px */
-    height: 22.6875rem; /* 363px */
+    margin-top: 10%;
+    width: min(90%, 36.6875rem); /* responsive width */
     background-color: #002d5c;
     border-radius: 0.625rem; /* 10px */
     overflow: hidden;
@@ -87,29 +100,19 @@ body {
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: 0.25rem 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.2); /* 4px 4px 20px */
-}
-
-.card-right-contacto {
-    box-shadow: 0.25rem 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto; /* let content define height */
 }
 
 /* Card Background */
 .card-background-contacto {
     position: absolute;
-    width: 37.1875rem; /* 595px */
-    height: 24.75rem; /* 396px */
-}
-
-.card-left-contacto .card-background-contacto {
-    left: -0.5rem; /* -8px */
-    top: -1.1875rem; /* -19px */
-}
-
-.card-right-contacto .card-background-contacto {
-    left: -2.125rem; /* -34px */
-    top: -0.125rem; /* -2px */
-    width: 40.625rem; /* 650px */
-    height: 22.8125rem; /* 365px */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .card-background-contacto img {
@@ -136,56 +139,36 @@ body {
 .card-content-contacto {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    height: auto;
     transition: transform 0.4s ease;
 }
 
 .card-title-contacto {
-    position: absolute;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 1.5rem; /* 24px */
-    line-height: normal;
+    line-height: 1.3;
     letter-spacing: 0.045rem; /* 0.72px */
     color: white;
-}
-
-.card-left-contacto .card-title-contacto {
-    left: 1.25rem; /* 20px */
-    top: 2.6875rem; /* 43px */
-}
-
-.card-right-contacto .card-title-contacto {
-    left: 1.625rem; /* 26px */
-    top: 1.75rem; /* 28px */
-    width: 33.5rem; /* 536px */
-    white-space: pre-wrap;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .card-text-contacto {
-    position: absolute;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.125rem; /* 18px */
     line-height: 1.5;
     letter-spacing: 0.03375rem; /* 0.54px */
     color: white;
-    white-space: pre-wrap;
-}
-
-.card-left-contacto .card-text-contacto {
-    left: 1.25rem; /* 20px */
-    top: 5.3125rem; /* 85px */
-    width: 32.6875rem; /* 523px */
-}
-
-.card-right-contacto .card-text-contacto {
-    left: 1.625rem; /* 26px */
-    top: 9.4375rem; /* 151px */
-    width: 31.5625rem; /* 505px */
-    font-family: 'Afacad', sans-serif;
-    font-size: 0;
-    letter-spacing: 0.0375rem; /* 0.6px */
-    text-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.4); /* 15px */
+    word-break: break-word;
+    white-space: normal;
 }
 
 .card-text-contacto p {
@@ -206,11 +189,11 @@ body {
     font-size: 1.25rem; /* 20px */
 }
 
-/* Card Arrow (Hidden by default, appears on hover) */
+/* Card Arrow at bottom-right corner */
 .card-arrow-contacto {
     position: absolute;
-    right: -5rem; /* -80px - hidden off screen */
-    top: 18.125rem; /* 290px */
+    right: 1.6875rem; /* 27px */
+    bottom: 1.6875rem; /* 27px from bottom */
     width: 3.125rem; /* 50px */
     height: 3.125rem; /* 50px */
     display: flex;
@@ -244,9 +227,23 @@ body {
 }
 
 .interactive-card-contacto:hover .card-arrow-contacto {
-    right: 1.6875rem; /* 27px */
     opacity: 0.7;
 }
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 90rem) {
+    .cards-section-contacto {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .interactive-card-contacto {
+        width: 90%;
+        max-width: 36.6875rem;
+    }
+}
+
 
 /* Form Introduction Section */
 .form-intro-section {
@@ -423,8 +420,7 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 2rem;
-        gap: 2rem;
-        margin-top: -10rem;
+        gap: 1rem;
     }
     
     .interactive-card-contacto {
