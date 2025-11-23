@@ -164,8 +164,8 @@ ${data.mensaje || "No especificado"}
 
     // Email options
     const mailOptions = {
-      from: `"Web Senior Advisors" <${process.env.EMAIL_USER}>`,
-      to: "cortegamartin6@gmail.com",
+      from: `"Web Senior Advisors" <${process.env.EMAIL_USER}>`, //Este email luego se cambia por el de info@senioradvisormov.com
+      to: "mjose.martin@senioradvisormov.com", 
       subject: subject,
       text: emailContent.trim()
     };
