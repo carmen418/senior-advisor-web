@@ -167,8 +167,20 @@ body { /*this is the background of the page*/
 .mirada-externa-content {
     position: absolute;
     left: 4.5625rem; /* 73px */
-    top: 0;
+    top: 0.5625rem; /* 9px - aligned with image */
     width: 39.625rem; /* 634px */
+}
+
+.mirada-externa-subtitle {
+    margin-top: 1%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.75rem, 4vw, 2.3rem);
+    text-align: left;
+    background: linear-gradient(to right, #a7becf 0%, #0857a0 134%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .mirada-externa-text {
@@ -266,14 +278,21 @@ body { /*this is the background of the page*/
 }
 
 .mirada-interna-content {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 10;
+    display: flex;
+    align-items: center;
 }
 
 .mirada-interna-text {
     position: absolute;
     left: 3.1875rem; /* 51px */
-    top: 2.25rem; /* 36px */
+    top: 50%;
+    transform: translateY(-50%);
     width: 33.1875rem; /* 531px */
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -303,13 +322,31 @@ body { /*this is the background of the page*/
     margin-bottom: 0;
 }
 
-.mirada-interna-title {
+.mirada-interna-title-container {
     position: absolute;
     left: 53.125rem; /* 850px */
-    top: 12.5625rem; /* 201px */
+    top: 50%;
+    transform: translateY(-50%);
     width: 31.1875rem; /* 499px */
     text-align: center;
+}
+
+.mirada-interna-title {
+    text-align: center;
     text-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.mirada-interna-subtitle {
+    margin-top: 1%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.75rem, 4vw, 2.3rem);
+    text-align: center;
+    background: linear-gradient(to right, #a7becf 0%, #0857a0 134%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Mirada Evolutiva Section */
@@ -352,10 +389,21 @@ body { /*this is the background of the page*/
     top: 5.8125rem; /* 93px */
 }
 
+.mirada-evolutiva-subtitle {
+    margin-top: 1%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.75rem, 4vw, 2.3rem);
+    text-align: left;
+    background: linear-gradient(to right, #a7becf 0%, #0857a0 134%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .mirada-evolutiva-text {
-    position: absolute;
-    left: 0;
-    top: 9.9375rem; /* 159px */
+    position: relative;
+    margin-top: 5%;
     width: 32.9375rem; /* 527px */
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -471,10 +519,13 @@ body { /*this is the background of the page*/
     margin-top: 10%;
     width: 100%;
     min-height: 100vh; /* this is the height of the background image */
-    overflow: hidden;
+    overflow: hidden; /* Changed from hidden to visible to prevent content cutoff */
 }
 
 .areas-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -749,11 +800,18 @@ body { /*this is the background of the page*/
         width: calc(100% - 4rem);
     }
     
+    .mirada-interna-content {
+        position: relative;
+        display: block;
+        height: auto;
+    }
+    
     .mirada-interna-text,
-    .mirada-interna-title {
+    .mirada-interna-title-container {
         position: relative;
         left: auto;
         top: auto;
+        transform: none;
         width: 100%;
         padding: 1rem;
     }
@@ -772,7 +830,7 @@ body { /*this is the background of the page*/
     }
 
     .areas-background {
-        overflow: hidden;
+        overflow: visible; /* Changed to visible to prevent content cutoff */
     }
     
     .areas-grid {
@@ -817,6 +875,22 @@ body { /*this is the background of the page*/
     .section-title {
         font-size: clamp(1.375rem, 6vw, 1.875rem);
         text-align: center;
+    }
+    
+    .mirada-externa-subtitle {
+        text-align: center;
+    }
+    
+    .mirada-interna-subtitle {
+        text-align: center;
+    }
+    
+    .mirada-evolutiva-subtitle {
+        text-align: center;
+    }
+    
+    .mirada-externa-text {
+        margin-top: 5%;
     }
     
     .mirada-externa-text,

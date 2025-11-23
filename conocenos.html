@@ -34,16 +34,6 @@
 
         <!-- Profiles Section -->
         <section class="profiles-section-conocenos">
-            <!-- Juan Carlos Cubeiro -->
-            <div class="profile-container-conocenos profile-left-conocenos">
-                <div class="profile-image-blur-conocenos">
-                    <img src="assets/juan_carlos.png" alt="Juan Carlos Cubeiro">
-                </div>
-                <h2 class="profile-name-conocenos">Juan Carlos Cubeiro</h2>
-                <p class="profile-role-conocenos">Presidente Club Senior Advisors & Senior Advisor Principal</p>
-                <p class="profile-bio-conocenos"><strong>Apasionado del management, el liderazgo y la liberación del talento</strong>. Durante más de 38 años, he tenido el privilegio de <strong>liderar proyectos estratégicos para más de mil compañías</strong>. Ha escrito <strong>61 libros</strong>, incluidos varios bestsellers como La Sensación de Fluidez, Liderazgo Guardiola, Por qué necesitas un coach o Liderazgo Zidane. <strong>Conferenciante internacional</strong> en más de 30 países y profesor en Escuelas de negocios como EBS, Galicia Business School, Deusto, CEU y ESIC.</p>
-            </div>
-
             <!-- Maria José Martín -->
             <div class="profile-container-conocenos profile-right-conocenos">
                 <div class="profile-image-blur-conocenos">
@@ -52,6 +42,15 @@
                 <h2 class="profile-name-conocenos">Maria José Martín</h2>
                 <p class="profile-role-conocenos">CEO & Senior Advisor Principal</p>
                 <p class="profile-bio-conocenos">Profesional senior con <strong>más de 25 años de experiencia en Dirección</strong> y creación de nuevos negocios y fundadora de Senior Advisors M. <strong>Cree en el valor de las personas como parte esencial de un proyecto</strong>, la importancia del propósito, la criticidad del middle Management, las decisiones informadas, la tecnología reflexionada y el liderazgo por el ejemplo, como camino hacia el éxito.</p>
+            </div>
+            <!-- Juan Carlos Cubeiro -->
+            <div class="profile-container-conocenos profile-left-conocenos">
+                <div class="profile-image-blur-conocenos">
+                    <img src="assets/juan_carlos.png" alt="Juan Carlos Cubeiro">
+                </div>
+                <h2 class="profile-name-conocenos">Juan Carlos Cubeiro</h2>
+                <p class="profile-role-conocenos">Presidente Club Senior Advisors & Senior Advisor Principal</p>
+                <p class="profile-bio-conocenos"><strong>Apasionado del management, el liderazgo y la liberación del talento</strong>. Durante más de 38 años, he tenido el privilegio de <strong>liderar proyectos estratégicos para más de mil compañías</strong>. Ha escrito <strong>61 libros</strong>, incluidos varios bestsellers como La Sensación de Fluidez, Liderazgo Guardiola, Por qué necesitas un coach o Liderazgo Zidane. <strong>Conferenciante internacional</strong> en más de 30 países y profesor en Escuelas de negocios como EBS, Galicia Business School, Deusto, CEU y ESIC.</p>
             </div>
         </section>
 
@@ -185,7 +184,26 @@
 
                     if (!isActive) {
                         item.classList.add('active');
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        // Use setTimeout to ensure all CSS transitions and styles are applied
+                        setTimeout(() => {
+                            // scrollHeight already includes padding, but check for margins on children
+                            let totalHeight = answer.scrollHeight;
+                            
+                            // Check if last child has bottom margin that might not be included
+                            const lastChild = answer.lastElementChild;
+                            if (lastChild) {
+                                const lastChildStyle = window.getComputedStyle(lastChild);
+                                const marginBottom = parseFloat(lastChildStyle.marginBottom) || 0;
+                                // Only add if margin is significant and might be causing cutoff
+                                if (marginBottom > 0) {
+                                    totalHeight += marginBottom;
+                                }
+                            }
+                            
+                            // Add generous buffer to prevent bottom cutoff
+                            const buffer = 60; // Increased buffer significantly
+                            answer.style.maxHeight = (totalHeight + buffer) + 'px';
+                        }, 100); // Increased timeout to ensure all styles and transitions are applied
                     }
                 });
             });
@@ -193,7 +211,24 @@
             window.addEventListener('resize', () => {
                 const activeAnswer = document.querySelector('.faq-item-conocenos.active .faq-answer-conocenos');
                 if (activeAnswer) {
-                    activeAnswer.style.maxHeight = activeAnswer.scrollHeight + 'px';
+                    // Use setTimeout to ensure styles are recalculated
+                    setTimeout(() => {
+                        let totalHeight = activeAnswer.scrollHeight;
+                        
+                        // Check if last child has bottom margin
+                        const lastChild = activeAnswer.lastElementChild;
+                        if (lastChild) {
+                            const lastChildStyle = window.getComputedStyle(lastChild);
+                            const marginBottom = parseFloat(lastChildStyle.marginBottom) || 0;
+                            if (marginBottom > 0) {
+                                totalHeight += marginBottom;
+                            }
+                        }
+                        
+                        // Add generous buffer to prevent bottom cutoff
+                        const buffer = 60; // Increased buffer significantly
+                        activeAnswer.style.maxHeight = (totalHeight + buffer) + 'px';
+                    }, 100);
                 }
             });
         });

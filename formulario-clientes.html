@@ -29,11 +29,7 @@
             <p class="form-description" data-node-id="200-882">Solicita una runión y descubre cómo nuestros profesionales sénior pueden ayudarte a transformar tus retos en oportunidades reales</p>
 
             <!-- Form Fields -->
-            <form class="registration-form" id="clientesForm" action="https://formspree.io/f/xpwovqeb" method="POST">
-                <input type="hidden" name="_next" value="index.html">
-                <input type="hidden" name="_subject" value="Solicitud de llamada (formulario de clientes)">
-                <input type="hidden" name="_cc" value="mjose.martin@senioradvisormov.com">
-                <input type="hidden" name="_cc" value="cortegamartin6@gmail.com">
+            <form class="registration-form" id="clientesForm">
                 
                 <!-- Empresa -->
                 <div class="form-field" data-node-id="338-890">
@@ -246,7 +242,9 @@
             });
             
             if (clientesForm) {
-                clientesForm.addEventListener('submit', function(e) {
+                clientesForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
                     // Check required fields
                     const requiredFields = this.querySelectorAll('input[required]:not([type="checkbox"]), textarea[required]');
                     let allFilled = true;
@@ -258,7 +256,6 @@
                     });
                     
                     if (!allFilled) {
-                        e.preventDefault();
                         alert('Por favor, complete todos los campos obligatorios marcados con *');
                         return false;
                     }
@@ -266,7 +263,6 @@
                     // Check at least one disponibilidad checkbox is checked
                     const disponibilidadChecked = this.querySelectorAll('input[name="disponibilidad[]"]:checked');
                     if (disponibilidadChecked.length === 0) {
-                        e.preventDefault();
                         alert('Por favor, seleccione al menos un día de disponibilidad.');
                         return false;
                     }
@@ -274,7 +270,6 @@
                     // Check privacy policy checkbox
                     const privacyCheckbox = this.querySelector('input[name="privacy_policy"]');
                     if (!privacyCheckbox.checked) {
-                        e.preventDefault();
                         alert('Debe aceptar la política de privacidad para continuar.');
                         return false;
                     }
@@ -283,13 +278,65 @@
                     const email = this.querySelector('input[name="email"]').value;
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        e.preventDefault();
                         alert('Por favor, introduzca una dirección de correo electrónico válida.');
                         return false;
                     }
 
-                    // Show success message (form will then submit and redirect)
-                    alert('¡Gracias por su solicitud! Nos pondremos en contacto con usted pronto.');
+                    // Collect form data
+                    const formData = {
+                        formType: 'reunion',
+                        empresa: this.querySelector('input[name="empresa"]').value.trim(),
+                        nombre: this.querySelector('input[name="nombre"]').value.trim(),
+                        apellidos: this.querySelector('input[name="apellidos"]').value.trim(),
+                        email: email,
+                        telefono: this.querySelector('input[name="telefono"]').value.trim(),
+                        calle: this.querySelector('input[name="calle"]').value.trim(),
+                        municipio: this.querySelector('input[name="municipio"]').value.trim(),
+                        codigo_postal: this.querySelector('input[name="codigo_postal"]').value.trim(),
+                        tipo_servicio: Array.from(this.querySelectorAll('input[name="tipo_servicio[]"]:checked')).map(cb => cb.value),
+                        disponibilidad: Array.from(disponibilidadChecked).map(cb => cb.value),
+                        resumen: this.querySelector('textarea[name="resumen"]').value.trim(),
+                        comentarios: this.querySelector('textarea[name="comentarios"]').value.trim() || null
+                    };
+
+                    // Disable submit button
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span>enviando...</span>';
+
+                    try {
+                        const response = await fetch('/.netlify/functions/send_email', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            alert('¡Gracias por su solicitud! Nos pondremos en contacto con usted pronto.');
+                            this.reset();
+                            // Reset checkbox icons
+                            checkboxItems.forEach(item => {
+                                const icon = item.querySelector('.checkbox-icon');
+                                icon.src = uncheckedImg;
+                                icon.alt = 'Unchecked';
+                            });
+                            // Redirect to home page
+                            window.location.href = 'index.html';
+                        } else {
+                            throw new Error(result.error || 'Error al enviar el formulario');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Hubo un error al enviar su solicitud. Por favor, intente nuevamente.');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    }
                 });
             }
         });

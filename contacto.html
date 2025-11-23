@@ -88,7 +88,7 @@
         <section class="contact-form-section-contacto">
             <h2 class="form-title-contacto">Contáctanos</h2>
             
-            <form class="contact-form-contacto" id="contactForm" action="https://formspree.io/f/mqagrejq" method="POST">
+            <form class="contact-form-contacto" id="contactForm">
                 <div class="form-group-contacto">
                     <label class="form-label-contacto">nombre</label>
                     <input type="text" name="nombre" class="form-input-contacto" placeholder="Tu nombre..." required>
@@ -109,10 +109,6 @@
                     <textarea name="mensaje" class="form-textarea-contacto" placeholder="Escribe aquí..." required></textarea>
                 </div>
 
-                <input type="hidden" name="_next" value="index.html">
-                <input type="hidden" name="_replyto" value="mjose.martin@senioradvisormov.com">
-                <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde el sitio web">
-                <input type="hidden" name="_cc" value="mjose.martin@senioradvisormov.com">
 
                 <button type="submit" class="form-submit-btn-contacto">
                     <span>enviar</span>
@@ -136,26 +132,64 @@
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
                     const nombre = this.querySelector('input[name="nombre"]').value.trim();
                     const email = this.querySelector('input[name="email"]').value.trim();
                     const concepto = this.querySelector('input[name="concepto"]').value.trim();
                     const mensaje = this.querySelector('textarea[name="mensaje"]').value.trim();
                     
+                    // Validation
                     if (!nombre || !email || !concepto || !mensaje) {
-                        e.preventDefault();
                         alert('Por favor, complete todos los campos del formulario.');
                         return false;
                     }
 
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        e.preventDefault();
                         alert('Por favor, introduzca una dirección de correo electrónico válida.');
                         return false;
                     }
 
-                    alert('¡Gracias por contactarnos! Recibiremos su mensaje pronto.');
+                    // Disable submit button
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span>enviando...</span>';
+
+                    try {
+                        const response = await fetch('/.netlify/functions/send_email', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                formType: 'general',
+                                nombre: nombre,
+                                email: email,
+                                concepto: concepto,
+                                mensaje: mensaje
+                            })
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            alert('¡Gracias por contactarnos! Recibiremos su mensaje pronto.');
+                            this.reset();
+                            // Redirect to home page
+                            window.location.href = 'index.html';
+                        } else {
+                            throw new Error(result.error || 'Error al enviar el mensaje');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Hubo un error al enviar su mensaje. Por favor, intente nuevamente.');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    }
                 });
             }
         });

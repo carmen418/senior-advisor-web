@@ -119,7 +119,7 @@ body {
 /* Profile Image */
 .profile-image-blur-conocenos {
     position: relative;
-    width: 70%;
+    width: 50%;
     height: auto;
     overflow: hidden;
 }
@@ -161,7 +161,7 @@ body {
     margin-top: 0.5rem;
     font-family: 'Afacad', sans-serif;
     font-weight: 400;
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
     color: #a7becf;
     text-align: center;
 }
@@ -313,10 +313,11 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
+    box-sizing: border-box;
 }
 
 .faq-item-conocenos.active .faq-answer-conocenos {
-    max-height: 31.25rem; /* 500px */
+    max-height: 31.25rem; /* 500px - fallback, JS will override */
 }
 
 /* FAQ Answer: Text Type */

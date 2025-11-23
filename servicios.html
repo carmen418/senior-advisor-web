@@ -65,17 +65,16 @@
         <!-- Mirada Externa Section -->
         <section class="mirada-externa-section">
             <div class="mirada-externa-content">
-                <h2 class="section-title">MIRADA EXTERNA: SENIOR ADVISOR EXTERNO</h2>
+                <h2 class="section-title">MIRADA EXTERNA</h2>
+                <p class="mirada-externa-subtitle">Senior Advisor Externo</p>
                 <div class="mirada-externa-text">
                     <p>Profesionales validados con <strong>experiencia directiva</strong> en contextos complejos.</p>
                     <p>Actúan como <strong>acompañantes estratégicos</strong>, sin generar dependencia permanente.</p>
                     <p>&nbsp;</p>
-                    <p>Subservicios:</p>
                     <ol>
                         <li><strong>Asesoramiento estratégico</strong></li>
                         <li>Proyectos especiales y <strong>diagnóstico</strong> áreas a intervenir</li>
                         <li><strong>Consejos asesores</strong>.</li>
-                        <li>Modelos de negocio, estrategia de talento e impacto tecnológico</li>
                     </ol>
                 </div>
             </div>
@@ -96,24 +95,23 @@
                     <p><strong>¿Dispones de Seniors internos brillantes y con una carrera directiva dentro de la compañía? Transfórmalos en Advisors para acelerar la evolución y la sucesión.</strong></p>
                     <p>&nbsp;</p>
                     <p><strong>Nosotros te ayudamos con el desarrollo de talento interno con perfil sénior</strong>, directivo y carrera ejemplificante para <strong>fortalecer procesos de transición y sucesión</strong>.</p>
-                    <ol type="a">
-                        <li>Selección y evaluación de candidatos internos</li>
-                        <li>Certificación y acompañamiento para operar como Senior Advisor interno o coach interno de aceleración de desarrollo joven.</li>
-                        <li>Revisión del plan retributivo</li>
-                    </ol>
                 </div>
-                <h2 class="section-title mirada-interna-title">MIRADA INTERNA: SENIOR ADVISOR INTERNO</h2>
+                <div class="mirada-interna-title-container">
+                    <h2 class="section-title mirada-interna-title">MIRADA INTERNA</h2>
+                    <p class="mirada-interna-subtitle">Senior Advisor Interno</p>
+                </div>
             </div>
         </section>
 
         <!-- Mirada Evolutiva Section -->
         <section class="mirada-evolutiva-section">
             <div class="mirada-evolutiva-image">
-                <img src="assets/mirada_evolutiva.jpg" alt="Mirada Evolutiva">
+                <img src="assets/mirada_evolutiva_2.jpg" alt="Mirada Evolutiva">
                 <div class="mirada-evolutiva-overlay"></div>
             </div>
             <div class="mirada-evolutiva-content">
-                <h2 class="section-title">MIRADA EVOLUTIVA: COACHING EJECUTIVO</h2>
+                <h2 class="section-title">MIRADA EVOLUTIVA</h2>
+                <p class="mirada-evolutiva-subtitle">Coaching Ejecutivo</p>
                 <p class="mirada-evolutiva-text">
                     <strong>Fortalecer</strong> liderazgo, visión estratégica y pensamiento crítico <strong>para la toma de decisiones sostenibles</strong> a través de procesos de <strong>coaching individual</strong> y <strong>colectivo</strong>.
                 </p>
@@ -209,20 +207,53 @@
     <script>
         const areasBackground = document.querySelector('.areas-background');
         const areasOverlay = document.querySelector('.areas-background-overlay');
+        const areasSection = document.querySelector('.areas-section');
 
         function updateAreasBackgroundHeight() {
-        // Get the bottom of the furthest element inside the overlay
-        const rects = Array.from(areasOverlay.children).map(el => el.getBoundingClientRect());
-        const minTop = Math.min(...rects.map(r => r.top));
-        const maxBottom = Math.max(...rects.map(r => r.bottom));
-
-        // Compute height relative to overlay top
-        const height = maxBottom - minTop;
-        areasBackground.style.height = height + 'px';
+            if (!areasBackground || !areasOverlay || !areasSection) return;
+            
+            // Use requestAnimationFrame to ensure all styles are applied
+            requestAnimationFrame(() => {
+                // Get the actual content height including all margins and paddings
+                const sectionRect = areasSection.getBoundingClientRect();
+                const overlayRect = areasOverlay.getBoundingClientRect();
+                
+                // Calculate the total height needed
+                // Include padding from areas-section
+                const computedStyle = window.getComputedStyle(areasSection);
+                const paddingTop = parseFloat(computedStyle.paddingTop) || 0;
+                const paddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
+                
+                // Get the bottom of the last element in the section
+                const lastElement = areasSection.lastElementChild;
+                let lastElementBottom = sectionRect.bottom;
+                
+                if (lastElement) {
+                    const lastElementRect = lastElement.getBoundingClientRect();
+                    const lastElementStyle = window.getComputedStyle(lastElement);
+                    const lastElementMarginBottom = parseFloat(lastElementStyle.marginBottom) || 0;
+                    lastElementBottom = lastElementRect.bottom + lastElementMarginBottom;
+                }
+                
+                // Calculate total height from overlay top to section bottom
+                const totalHeight = lastElementBottom - overlayRect.top + paddingBottom;
+                
+                // Add buffer to prevent cutoff
+                const buffer = 60; // Extra space to prevent content cutoff
+                areasBackground.style.height = Math.max(totalHeight + buffer, window.innerHeight) + 'px';
+            });
         }
 
-        window.addEventListener('load', updateAreasBackgroundHeight);
-        window.addEventListener('resize', updateAreasBackgroundHeight);
+        // Run on load and resize
+        window.addEventListener('load', () => {
+            setTimeout(updateAreasBackgroundHeight, 100); // Wait for all styles to apply
+        });
+        window.addEventListener('resize', () => {
+            setTimeout(updateAreasBackgroundHeight, 100); // Debounce resize
+        });
+        
+        // Also run after a short delay to catch any late-loading content
+        setTimeout(updateAreasBackgroundHeight, 500);
 
     </script>
     <script src="footer.js"></script>

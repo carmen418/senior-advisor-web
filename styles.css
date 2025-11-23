@@ -176,12 +176,34 @@ body {
     justify-content: center;
     width: 30px;
     height: 30px;
-    transform: rotate(180deg) scaleY(-1);
+    position: relative;
 }
 
 .btn-icon img {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+/* First button icon - white */
+.btn-conocenos .btn-icon img {
+    filter: brightness(0) invert(1);
+}
+
+/* Second button icon - matches text color #b4bae8 using mask */
+.btn-hablemos .btn-icon {
+    background-color: #b4bae8;
+    mask-image: url('assets/arrow_forward.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('assets/arrow_forward.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+}
+
+.btn-hablemos .btn-icon img {
+    display: none;
 }
 
 /* Tus Retos Section - absolute left:54px top:1351px */
@@ -609,6 +631,7 @@ body {
     grid-template-columns: repeat(auto-fit, 504px);
     gap: 0;
     justify-items: center;
+    justify-content: center;
 }
 
 .pilar-card {
@@ -761,6 +784,10 @@ body {
     font-size: 1.25rem;
     letter-spacing: 0.6px;
     color: white;
+}
+
+.btn-cta .btn-icon img {
+    filter: brightness(0) invert(1);
 }
 
 /* Small screens adjustments */
