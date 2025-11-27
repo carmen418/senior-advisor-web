@@ -180,7 +180,7 @@
                 <div class="areas-container">
                     <div class="areas-column" data-node-id="200-729">
                         <div class="checkbox-item" data-checkbox>
-                            <input type="checkbox" name="areas_intervencion[]" value="Estrategia y evolución de la compañía" class="hidden-checkbox" required>
+                            <input type="checkbox" name="areas_intervencion[]" value="Estrategia y evolución de la compañía" class="hidden-checkbox">
                             <img src="../assets/check_box_outline_blank.svg" alt="Unchecked" class="checkbox-icon">
                             <label>Estrategia y evolución de la compañía</label>
                         </div>
@@ -403,10 +403,10 @@
                         return false;
                     }
 
-                    // Check at least one area de intervención checkbox is checked
+                    // Check at least one area de intervención checkbox is checked (REQUIRED FIELD)
                     const areasChecked = this.querySelectorAll('input[name="areas_intervencion[]"]:checked');
                     if (areasChecked.length === 0) {
-                        alert('Por favor, seleccione al menos un área de intervención.');
+                        alert('Por favor, seleccione al menos un área de intervención. Este campo es obligatorio.');
                         return false;
                     }
 
@@ -525,10 +525,9 @@
 
                 <h3>1. Identidad del responsable</h3>
                 <p>Entidad: Senior Advisors Movilizadores S.L.</p>
-                <p>NIF: _______</p>
-                <p>Domicilio: _______________________</p>
+                <p>NIF: B-23872336</p>
                 <p>Correo electrónico: mjomargo@gmail.com</p>
-                <p>Teléfono: _______</p>
+                <p>Teléfono: 600936501</p>
 
                 <h3>2. Datos que recabamos</h3>
                 <p>Recabamos información mediante los formularios de Clientes, Potenciales Clientes y Proveedores.</p>
