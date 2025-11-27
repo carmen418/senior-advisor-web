@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Advisors - Inicio</title>
+
+    <title>Senior Advisors Movilizadores - Consultoría Estratégica y Transformación Empresarial</title>
+    <meta name="description" content="Senior Advisors M conecta talento sénior con empresas en transformación, ofreciendo asesoramiento estratégico, innovación y acompañamiento de alto impacto.">
+    <link rel="canonical" href="https://www.senioradvisormov.com/">
+
+    <link rel="icon" href="/assets/logo_preview.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Senior Advisors Movilizadores - Consultoría Estratégica y Transformación Empresarial">
+    <meta property="og:description" content="Conectamos talento sénior con empresas en transformación para lograr decisiones estratégicas y sostenibles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.senioradvisormov.com/">
+    <meta property="og:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Senior Advisors Movilizadores - Consultoría Estratégica y Transformación Empresarial">
+    <meta name="twitter:description" content="Conectamos talento sénior con empresas en transformación para decisiones estratégicas y sostenibles.">
+    <meta name="twitter:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Fonts y CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700;900&family=Inter:wght@400;600;700&family=Afacad&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
-    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="privacy/privacy_gen_modal.css">
+
+    <script src="navbar.js" defer></script>
 </head>
+
 <body>
     <div class="backdrop-inicio">
         <!-- Navigation Component -->
@@ -39,14 +62,14 @@
 
             <!-- Buttons -->
             <div class="hero-buttons">
-                <button class="btn-primary btn-conocenos" onclick="window.location.href='servicios.html'">
+                <button class="btn-primary btn-conocenos" onclick="window.location.href='servicios/servicios.html'">
                     <span class="btn-text">conoce como trabajamos</span>
                     <div class="btn-icon">
                         <img src="assets/arrow_forward.svg" alt="arrow">
                     </div>
                 </button>
 
-                <button class="btn-secondary btn-hablemos" onclick="window.location.href='contacto.html'">
+                <button class="btn-secondary btn-hablemos" onclick="window.location.href='contacto/contacto.html'">
                     <span class="btn-text">hablemos</span>
                     <div class="btn-icon">
                         <img src="assets/arrow_forward.svg" alt="arrow">
@@ -229,7 +252,7 @@
             </div>
             <div class="cta-content">
                 <h2 class="cta-title">CONSTRUIMOS EL FUTURO CONTIGO</h2>
-                <button class="btn-cta" onclick="window.location.href='servicios.html'">
+                <button class="btn-cta" onclick="window.location.href='servicios/servicios.html'">
                     <span class="btn-text">Descubre como te acompañamos</span>
                     <div class="btn-icon">
                         <img src="assets/arrow_forward.svg" alt="arrow">
@@ -241,7 +264,11 @@
         <div id="footer-container"></div>
     </div>
 
+    <!-- Privacy Gen Modal Container -->
+    <div id="privacy-gen-modal-container"></div>
+
     <script src="footer.js"></script>
+    <script src="privacy/privacy_gen_modal.js"></script>
     <script src="gen_lines.js"></script>
     <script src="navbar.js"></script>
 </body>

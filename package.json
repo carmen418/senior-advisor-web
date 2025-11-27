@@ -4,7 +4,9 @@
   "description": "Senior Advisors website with email functionality",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev",
+    "start": "netlify dev"
   },
   "dependencies": {
     "nodemailer": "^6.9.7"

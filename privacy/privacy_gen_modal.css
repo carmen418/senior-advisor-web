@@ -1,0 +1,248 @@
+/* Privacy Gen Modal Overlay - Modern & Minimalist */
+.privacy-gen-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.privacy-gen-modal-content {
+    background-color: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.privacy-gen-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1;
+    line-height: 1;
+    padding: 0;
+}
+
+.privacy-gen-modal-close:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.privacy-gen-modal-body {
+    padding: 3rem 2.5rem 2.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.privacy-gen-modal-body h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #0857a0;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    border-bottom: 3px solid #0857a0;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-gen-modal-body h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0857a0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-gen-modal-body h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #194860;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-gen-modal-body h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #194860;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-gen-modal-body p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.privacy-gen-modal-body .section {
+    margin-bottom: 2rem;
+}
+
+.privacy-gen-modal-body .data-section {
+    background-color: #f8f9fa;
+    padding: 1.25rem;
+    border-left: 4px solid #0857a0;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.privacy-gen-modal-body .data-section p {
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.privacy-gen-modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.privacy-gen-modal-body table td {
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.privacy-gen-modal-body table td:first-child {
+    font-weight: 600;
+    background-color: #f8f9fa;
+    width: 30%;
+    color: #194860;
+}
+
+.privacy-gen-modal-body ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.privacy-gen-modal-body li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-gen-modal-body strong {
+    color: #194860;
+    font-weight: 600;
+}
+
+/* Scrollbar styling for webkit browsers */
+.privacy-gen-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.privacy-gen-modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.privacy-gen-modal-body::-webkit-scrollbar-thumb {
+    background: #0857a0;
+    border-radius: 4px;
+}
+
+.privacy-gen-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #064a87;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .privacy-gen-modal-overlay {
+        padding: 1rem;
+    }
+
+    .privacy-gen-modal-content {
+        max-height: 95vh;
+    }
+
+    .privacy-gen-modal-body {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .privacy-gen-modal-body h1 {
+        font-size: 1.75rem;
+    }
+
+    .privacy-gen-modal-body h2 {
+        font-size: 1.25rem;
+    }
+
+    .privacy-gen-modal-body h3 {
+        font-size: 1.1rem;
+    }
+
+    .privacy-gen-modal-body table {
+        font-size: 0.85rem;
+    }
+
+    .privacy-gen-modal-body table td {
+        padding: 0.5rem;
+    }
+
+    .privacy-gen-modal-body table td:first-child {
+        width: 35%;
+    }
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad y Términos</title>
+<style>
+  /* Fondo del modal */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+  }
+
+  /* Contenido del modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto; 
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; 
+    max-width: 800px;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Botón de cerrar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #000;
+  }
+
+  h2, h3 {
+    margin-top: 1em;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- Enlace que abre el modal -->
+<a href="#" id="openModal">Ver Política de Privacidad y Términos</a>
+
+<!-- Modal -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    
+    <h2>Política de Privacidad</h2>
+
+    <h3>1. Identidad del responsable</h3>
+    <p>Entidad: Senior Advisors Movilizadores S.L.</p>
+    <p>NIF: B-23872336</p>
+    <p>Domicilio:  C/ HUERTAS 23, 3-A, 28220 MAJADAHONDA (MADRID)
+    </p>
+    <p>Correo electrónico: mjomargo@gmail.com</p>
+    <p>Teléfono: 600936501</p>
+    <h3>2. Datos que recabamos</h3>
+    <p>Recabamos información mediante los formularios de Clientes, Potenciales Clientes y Proveedores.</p>
+
+    <h3>3. Finalidades del tratamiento</h3>
+    <ul>
+      <li>Clientes: prestación de servicios y facturación.</li>
+      <li>Potenciales clientes: atender solicitudes de información y comunicaciones comerciales con consentimiento.</li>
+      <li>Proveedores: gestión de pedidos y facturación.</li>
+    </ul>
+
+    <h3>4. Base legal</h3>
+    <p>Consentimiento, ejecución de contrato y obligación legal según corresponda.</p>
+
+    <h3>5. Gestión técnica</h3>
+    <p>Los datos se envían mediante funciones personalizadas de JS en Netlify y solo personal autorizado los gestiona.</p>
+
+    <h3>6. Conservación</h3>
+    <ul>
+      <li>Clientes y proveedores: mientras dure la relación comercial y plazos legales.</li>
+      <li>Potenciales clientes: hasta que se solicite supresión.</li>
+    </ul>
+
+    <h3>7. Derechos del usuario</h3>
+    <p>Acceso, rectificación, supresión, limitación, oposición y portabilidad mediante correo a mjomargo@gmail.com.</p>
+
+    <h3>8. Cláusulas informativas específicas</h3>
+    <p><strong>Clientes:</strong> Prestar el servicio solicitado y facturación. Consentimiento de publicidad: SI / NO</p>
+    <p><strong>Potenciales clientes:</strong> Información solicitada y comunicaciones comerciales/eventos. Consentimiento: SI / NO</p>
+    <p><strong>Proveedores:</strong> Pedidos y facturación.</p>
+
+    <h2>Términos y Condiciones de los Formularios</h2>
+
+    <h3>1. Objeto</h3>
+    <p>Regula las condiciones del envío de información mediante los formularios de la web.</p>
+
+    <h3>2. Uso de los formularios</h3>
+    <p>Enviar información implica aceptación de la Política de Privacidad y Términos. Los datos deben ser veraces.</p>
+
+    <h3>3. Protección y confidencialidad</h3>
+    <p>Datos tratados de forma confidencial y solo accesibles por personal autorizado.</p>
+
+    <h3>4. Responsabilidad</h3>
+    <p>Senior Advisors Movilizadores S.L. no se responsabiliza por envío incorrecto de datos ni información de terceros.</p>
+
+    <h3>5. Modificaciones</h3>
+    <p>Los términos y la política pueden ser modificados y se publicarán en la web.</p>
+
+  </div>
+</div>
+
+<script>
+  // Obtener elementos
+  const modal = document.getElementById("privacyModal");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Abrir modal
+  openBtn.onclick = function(event) {
+    event.preventDefault();
+    modal.style.display = "block";
+  }
+
+  // Cerrar modal al pulsar "x"
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Cerrar modal al pulsar fuera del contenido
+  window.onclick = function(event) {
+    if(event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

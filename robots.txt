@@ -1,0 +1,19 @@
+# robots.txt para Senior Advisors Movilizadores
+# https://www.senioradvisormov.com/
+
+# Permitir acceso a todos los bots
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos de sistema y componentes (opcional)
+Disallow: /netlify/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://www.senioradvisormov.com/sitemap.xml
+
+# Crawl-delay (opcional - ayuda a no sobrecargar el servidor)
+# User-agent: *
+# Crawl-delay: 1
+

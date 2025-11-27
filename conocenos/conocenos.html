@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Advisors - Conócenos</title>
+
+    <title>Conócenos - Senior Advisors M: Nuestro Equipo y Metodología</title>
+    <meta name="description" content="Descubre quiénes son nuestros Senior Advisors, su experiencia y cómo acompañan a las empresas con visión estratégica y mirada humana.">
+    <link rel="canonical" href="https://www.senioradvisormov.com/conocenos.html">
+
+    <link rel="icon" href="/assets/logo_preview.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Conócenos - Senior Advisors M: Nuestro Equipo y Metodología">
+    <meta property="og:description" content="Conoce a nuestros Senior Advisors y su enfoque único para acompañar empresas en transformación y crecimiento sostenible.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.senioradvisormov.com/conocenos.html">
+    <meta property="og:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conócenos - Senior Advisors M: Nuestro Equipo y Metodología">
+    <meta name="twitter:description" content="Conoce a nuestros Senior Advisors y su enfoque único para acompañar empresas en transformación y crecimiento sostenible.">
+    <meta name="twitter:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Fonts y CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Inter:wght@400;600;700&family=Afacad:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="conocenos.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
-    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../privacy/privacy_gen_modal.css">
+
+    <script src="../navbar.js" defer></script>
 </head>
+
 <body>
     <div class="backdrop-conocenos">
         <!-- Navigation Component -->
@@ -20,7 +43,7 @@
         <!-- Hero Section -->
         <section class="hero-section-conocenos">
             <div class="hero-image-conocenos">
-                <img src="assets/conocenos_header.jpg" alt="Hero Background">
+                <img src="../assets/conocenos_header.jpg" alt="Hero Background">
             </div>
             <div class="hero-overlay-conocenos">
                 <p class="hero-title-conocenos">Creemos en el poder de la sabiduría y las conversaciones transformadoras</p>
@@ -37,7 +60,7 @@
             <!-- Maria José Martín -->
             <div class="profile-container-conocenos profile-right-conocenos">
                 <div class="profile-image-blur-conocenos">
-                    <img src="assets/maria_jose.png" alt="Maria José Martín">
+                    <img src="../assets/maria_jose.png" alt="Maria José Martín">
                 </div>
                 <h2 class="profile-name-conocenos">Maria José Martín</h2>
                 <p class="profile-role-conocenos">CEO & Senior Advisor Principal</p>
@@ -46,7 +69,7 @@
             <!-- Juan Carlos Cubeiro -->
             <div class="profile-container-conocenos profile-left-conocenos">
                 <div class="profile-image-blur-conocenos">
-                    <img src="assets/juan_carlos.png" alt="Juan Carlos Cubeiro">
+                    <img src="../assets/juan_carlos.png" alt="Juan Carlos Cubeiro">
                 </div>
                 <h2 class="profile-name-conocenos">Juan Carlos Cubeiro</h2>
                 <p class="profile-role-conocenos">Presidente Club Senior Advisors & Senior Advisor Principal</p>
@@ -155,7 +178,7 @@
         <div id="footer-container"></div>
     </div>
 
-    <script src="footer.js"></script>
+    <script src="../footer.js"></script>
     <script>
         // FAQ Toggle Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -233,5 +256,10 @@
             });
         });
     </script>
+
+    <!-- Privacy Gen Modal Container -->
+    <div id="privacy-gen-modal-container"></div>
+
+    <script src="../privacy/privacy_gen_modal.js"></script>
 </body>
 </html>

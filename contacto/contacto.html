@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Senior Advisors</title>
+
+    <title>Contacto - Senior Advisors M: Hablemos</title>
+    <meta name="description" content="Contacta con Senior Advisors M y descubre cómo nuestra red de talento sénior puede acompañar a tu empresa en transformación y decisiones estratégicas.">
+    <link rel="canonical" href="https://www.senioradvisormov.com/contacto.html">
+
+    <link rel="icon" href="/assets/logo_preview.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contacto - Senior Advisors M: Solicita tu Sesión Estratégica">
+    <meta property="og:description" content="Solicita tu sesión estratégica con Senior Advisors M y comienza a liderar el cambio en tu empresa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.senioradvisormov.com/contacto.html">
+    <meta property="og:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto - Senior Advisors M: Solicita tu Sesión Estratégica">
+    <meta name="twitter:description" content="Solicita tu sesión estratégica con Senior Advisors M y comienza a liderar el cambio en tu empresa.">
+    <meta name="twitter:image" content="https://www.senioradvisormov.com/assets/logo_preview.png">
+
+    <!-- Fonts y CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Afacad:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contacto.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
-    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../privacy/privacy_gen_modal.css">
+    <script src="../navbar.js" defer></script>
 </head>
 <body>
     <div class="backdrop-contacto">
@@ -20,7 +41,7 @@
         <!-- Hero Section with Title -->
         <section class="hero-section-contacto">
             <div class="hero-background-contacto">
-                <img src="assets/contacto_header.jpg" alt="Background">
+                <img src="../assets/contacto_header.jpg" alt="Background">
                 <div class="hero-background-overlay-contacto"></div>
             </div>
             <div class="hero-overlay-contacto">
@@ -28,9 +49,9 @@
                 <!-- Interactive Cards Section -->
                 <section class="cards-section-contacto">
                     <!-- Card 1: Solicita una reunión (Left Card) -->
-                    <a href="formulario-clientes.html" class="interactive-card-contacto card-left-contacto">
+                    <a href="../formularios/formulario-clientes.html" class="interactive-card-contacto card-left-contacto">
                         <div class="card-background-contacto">
-                            <img src="assets/reunion.jpg" alt="Background">
+                            <img src="../assets/reunion.jpg" alt="Background">
                             <div class="card-overlay-contacto"></div>
                         </div>
                         <div class="card-content-contacto">
@@ -53,9 +74,9 @@
                     </a>
 
                     <!-- Card 2: Únete a la red (Right Card) -->
-                    <a href="formulario-senior-advisors.html" class="interactive-card-contacto card-right-contacto">
+                    <a href="../formularios/formulario-senior-advisors.html" class="interactive-card-contacto card-right-contacto">
                         <div class="card-background-contacto">
-                            <img src="assets/hazte_senior.jpg" alt="Background">
+                            <img src="../assets/hazte_senior.jpg" alt="Background">
                             <div class="card-overlay-contacto card-overlay-dark"></div>
                         </div>
                         <div class="card-content-contacto">
@@ -109,6 +130,12 @@
                     <textarea name="mensaje" class="form-textarea-contacto" placeholder="Escribe aquí..." required></textarea>
                 </div>
 
+                <!-- Privacy Policy -->
+                <div class="privacy-checkbox-contacto">
+                    <input type="checkbox" name="privacy_policy" class="hidden-checkbox-contacto" id="privacyCheckboxContacto" required>
+                    <img src="../assets/check_box_outline_blank.svg" alt="Unchecked" class="checkbox-icon-contacto" id="privacyCheckboxIconContacto">
+                    <label for="privacyCheckboxContacto">He leído y acepto la <a href="#" class="privacy-link-contacto" id="openPrivacyModalContacto">política de privacidad de datos</a> de Senior Advisors Movilizadores SL</label>
+                </div>
 
                 <button type="submit" class="form-submit-btn-contacto">
                     <span>enviar</span>
@@ -126,10 +153,131 @@
         <div id="footer-container"></div>
     </div>
 
-    <script src="footer.js"></script>
+    <!-- Privacy Modal Overlay -->
+    <div id="privacyModalContacto" class="privacy-modal-overlay">
+        <div class="privacy-modal-content">
+            <button class="privacy-modal-close" id="closePrivacyModalContacto" aria-label="Cerrar">&times;</button>
+            <div class="privacy-modal-body">
+                <h2>Política de Privacidad</h2>
+
+                <h3>1. Identidad del responsable</h3>
+                <p>Entidad: Senior Advisors Movilizadores S.L.</p>
+                <p>NIF: _______</p>
+                <p>Domicilio: _______________________</p>
+                <p>Correo electrónico: mjomargo@gmail.com</p>
+                <p>Teléfono: _______</p>
+
+                <h3>2. Datos que recabamos</h3>
+                <p>Recabamos información mediante los formularios de Clientes, Potenciales Clientes y Proveedores.</p>
+
+                <h3>3. Finalidades del tratamiento</h3>
+                <ul>
+                    <li>Clientes: prestación de servicios y facturación.</li>
+                    <li>Potenciales clientes: atender solicitudes de información y comunicaciones comerciales con consentimiento.</li>
+                    <li>Proveedores: gestión de pedidos y facturación.</li>
+                </ul>
+
+                <h3>4. Base legal</h3>
+                <p>Consentimiento, ejecución de contrato y obligación legal según corresponda.</p>
+
+                <h3>5. Gestión técnica</h3>
+                <p>Los datos se envían mediante funciones personalizadas de JS en Netlify y solo personal autorizado los gestiona.</p>
+
+                <h3>6. Conservación</h3>
+                <ul>
+                    <li>Clientes y proveedores: mientras dure la relación comercial y plazos legales.</li>
+                    <li>Potenciales clientes: hasta que se solicite supresión.</li>
+                </ul>
+
+                <h3>7. Derechos del usuario</h3>
+                <p>Acceso, rectificación, supresión, limitación, oposición y portabilidad mediante correo a mjomargo@gmail.com.</p>
+
+                <h3>8. Cláusulas informativas específicas</h3>
+                <p><strong>Clientes:</strong> Prestar el servicio solicitado y facturación. Consentimiento de publicidad: SI / NO</p>
+                <p><strong>Potenciales clientes:</strong> Información solicitada y comunicaciones comerciales/eventos. Consentimiento: SI / NO</p>
+                <p><strong>Proveedores:</strong> Pedidos y facturación.</p>
+
+                <h2>Términos y Condiciones de los Formularios</h2>
+
+                <h3>1. Objeto</h3>
+                <p>Regula las condiciones del envío de información mediante los formularios de la web.</p>
+
+                <h3>2. Uso de los formularios</h3>
+                <p>Enviar información implica aceptación de la Política de Privacidad y Términos. Los datos deben ser veraces.</p>
+
+                <h3>3. Protección y confidencialidad</h3>
+                <p>Datos tratados de forma confidencial y solo accesibles por personal autorizado.</p>
+
+                <h3>4. Responsabilidad</h3>
+                <p>Senior Advisors Movilizadores S.L. no se responsabiliza por envío incorrecto de datos ni información de terceros.</p>
+
+                <h3>5. Modificaciones</h3>
+                <p>Los términos y la política pueden ser modificados y se publicarán en la web.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../footer.js"></script>
     <script>
         // Form Submission Handler
         document.addEventListener('DOMContentLoaded', function() {
+            // Privacy Modal Handler
+            const privacyModal = document.getElementById('privacyModalContacto');
+            const openPrivacyLink = document.getElementById('openPrivacyModalContacto');
+            const closePrivacyBtn = document.getElementById('closePrivacyModalContacto');
+            const privacyCheckbox = document.getElementById('privacyCheckboxContacto');
+            const privacyCheckboxIcon = document.getElementById('privacyCheckboxIconContacto');
+            const checkedImg = '../assets/check_box.svg';
+            const uncheckedImg = '../assets/check_box_outline_blank.svg';
+
+            // Open modal
+            if (openPrivacyLink) {
+                openPrivacyLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (privacyModal) {
+                        privacyModal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+
+            // Close modal
+            if (closePrivacyBtn) {
+                closePrivacyBtn.addEventListener('click', function() {
+                    if (privacyModal) {
+                        privacyModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // Close modal when clicking outside
+            if (privacyModal) {
+                privacyModal.addEventListener('click', function(e) {
+                    if (e.target === privacyModal) {
+                        privacyModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // Handle checkbox toggle
+            if (privacyCheckbox && privacyCheckboxIcon) {
+                const checkboxContainer = privacyCheckbox.closest('.privacy-checkbox-contacto');
+                if (checkboxContainer) {
+                    checkboxContainer.addEventListener('click', function(e) {
+                        // Don't toggle if clicking the link
+                        if (e.target.closest('.privacy-link-contacto')) {
+                            return;
+                        }
+                        privacyCheckbox.checked = !privacyCheckbox.checked;
+                        privacyCheckboxIcon.src = privacyCheckbox.checked ? checkedImg : uncheckedImg;
+                        privacyCheckboxIcon.alt = privacyCheckbox.checked ? 'Checked' : 'Unchecked';
+                    });
+                }
+            }
+
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', async function(e) {
@@ -149,6 +297,12 @@
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
                         alert('Por favor, introduzca una dirección de correo electrónico válida.');
+                        return false;
+                    }
+
+                    // Check privacy policy checkbox
+                    if (privacyCheckbox && !privacyCheckbox.checked) {
+                        alert('Debe aceptar la política de privacidad para continuar.');
                         return false;
                     }
 
@@ -178,8 +332,13 @@
                         if (result.success) {
                             alert('¡Gracias por contactarnos! Recibiremos su mensaje pronto.');
                             this.reset();
+                            // Reset checkbox icon
+                            if (privacyCheckboxIcon) {
+                                privacyCheckboxIcon.src = uncheckedImg;
+                                privacyCheckboxIcon.alt = 'Unchecked';
+                            }
                             // Redirect to home page
-                            window.location.href = 'index.html';
+                            window.location.href = '../index.html';
                         } else {
                             throw new Error(result.error || 'Error al enviar el mensaje');
                         }
@@ -194,5 +353,10 @@
             }
         });
     </script>
+
+    <!-- Privacy Gen Modal Container -->
+    <div id="privacy-gen-modal-container"></div>
+
+    <script src="../privacy/privacy_gen_modal.js"></script>
 </body>
 </html>

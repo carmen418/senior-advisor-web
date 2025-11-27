@@ -1,7 +1,18 @@
+// Get base path for relative URLs
+function getBasePath() {
+    const path = window.location.pathname;
+    // Remove leading/trailing slashes and split
+    const parts = path.replace(/^\/|\/$/g, '').split('/').filter(p => p);
+    // Count directories (exclude .html files)
+    const depth = parts.filter(p => !p.includes('.html')).length;
+    return depth > 0 ? '../'.repeat(depth) : '';
+}
+
 // Load navbar into the page
 async function loadNavbar() {
     try {
-        const response = await fetch('navbar.html');
+        const basePath = getBasePath();
+        const response = await fetch(basePath + 'navbar.html');
         const html = await response.text();
         const navbarContainer = document.getElementById('navbar-container');
         
